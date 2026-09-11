@@ -7,7 +7,7 @@
   
   <!-- Metadatos SEO y Redes -->
   <meta name="description" content="Suite de optimización de red, mitigación de jitter y enrutamiento DNS Anycast para juegos competitivos en Android y Windows PC. Cero riesgo de anti-cheat.">
-  <meta name="theme-color" content="#0a0c10">
+  <meta name="theme-color" content="#090a0f">
   <meta property="og:title" content="CMR Ping Booster · Suite Gaming de Baja Latencia">
   <meta property="og:description" content="Optimización de red y sistema en Android y PC con estética negro mate minimalista y DNS Anycast LATAM.">
   <meta property="og:type" content="website">
@@ -16,10 +16,10 @@
   <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
   <link rel="apple-touch-icon" href="./assets/logo.png">
   
-  <!-- Tipografía Google Fonts Inter -->
+  <!-- Tipografía Google Fonts Inter y JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
   
   <!-- Hoja de Estilos -->
   <link rel="stylesheet" href="./styles.css">
@@ -30,18 +30,18 @@
   <header class="navbar">
     <div class="container nav-container">
       <a href="#" class="brand">
-        <img src="./assets/logo.png" alt="Logo CMR Faro" class="brand-logo">
+        <img src="./assets/logo.png" alt="Logo Oficial CMR" class="brand-logo">
         <div class="brand-text">
           <h1>CMR Ping Booster</h1>
-          <span>Suite Oficial Gaming</span>
+          <span>Creative Maximum Reasoning</span>
         </div>
       </a>
       <nav class="nav-links">
         <a href="#descargas" class="nav-link">Descargas</a>
         <a href="#caracteristicas" class="nav-link">Tecnología</a>
-        <a href="#actualizaciones" class="nav-link">Actualizador OTA</a>
-        <a href="#seguridad" class="nav-link">Seguridad</a>
-        <a href="#descargas" class="btn-nav">Obtener App</a>
+        <a href="#actualizaciones" class="nav-link">Buzón OTA</a>
+        <a href="#seguridad" class="nav-link">Privacidad</a>
+        <a href="#descargas" class="btn-nav">Descargar</a>
       </nav>
     </div>
   </header>
@@ -51,40 +51,57 @@
     <section class="hero">
       <div class="container">
         <div class="badge-live">
-          <span class="dot-green"></span>
-          <span>Red Anycast LATAM y Entorno Nitro En Línea</span>
+          <span class="status-indicator"></span>
+          <span>Red Anycast LATAM · Modo Optimizado Disponible</span>
         </div>
         
-        <h2 class="hero-title">Menos Latencia.<br><span class="highlight">Cero Interrupciones.</span></h2>
+        <h2 class="hero-title">Menos Latencia.<br><span class="hero-title-sub">Cero Interrupciones.</span></h2>
         
         <p class="hero-subtitle">
-          Optimizá el ping, eliminá los microtirones de Wi-Fi y estabilizá el frame pacing de tus partidas en Android y Windows PC con una arquitectura 100% Anti-Cheat Safe y estética negro mate minimalista.
+          Estabilización de jitter en Wi-Fi, enrutamiento Anycast y optimización del temporizador del sistema en Android y Windows PC. Arquitectura local sin inyección de memoria ni riesgo de baneo.
         </p>
 
         <!-- Botones de Descarga Directa -->
         <div class="cta-group" id="descargas">
-          <a href="./CMR_Ping_Booster_v1.0.1_Release.apk" download class="btn-primary" id="btn-dl-android">
-            <span style="font-size: 1.4rem;">🤖</span>
-            <div>
-              <span>Descargar para Android</span>
-              <span class="btn-sub" id="android-version-badge">v1.0.1 • Actualizable sin desinstalar</span>
+          <!-- Botón Android -->
+          <a href="./CMR_Ping_Booster_v1.0.1_Release.apk" download class="btn-download" id="btn-dl-android">
+            <div class="btn-icon-wrapper">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <!-- Icono Android Minimalista -->
+                <path d="M4 10v7c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-7" />
+                <path d="M8 3l2 3" />
+                <path d="M16 3l-2 3" />
+                <path d="M4 10h16" />
+                <circle cx="9" cy="14" r="1" fill="currentColor" />
+                <circle cx="15" cy="14" r="1" fill="currentColor" />
+              </svg>
+            </div>
+            <div class="btn-content">
+              <span class="btn-title">Descargar para Android</span>
+              <span class="btn-sub" id="android-version-badge">v1.0.1 APK · Directo sin desinstalar</span>
             </div>
           </a>
 
-          <a href="https://github.com/ChinoMR262/CMR-Ping-Booster/releases/latest/download/CMR_Ping_Booster_PC.exe" class="btn-secondary" id="btn-dl-pc">
-            <span style="font-size: 1.4rem;">🖥️</span>
-            <div>
-              <span>Descargar para PC (Windows)</span>
-              <span class="btn-sub" id="pc-version-badge">v1.0.0 • Portable sin instalación</span>
+          <!-- Botón Windows PC -->
+          <a href="https://github.com/ChinoMR262/CMR-Ping-Booster/releases/latest/download/CMR_Ping_Booster_PC.exe" class="btn-download" id="btn-dl-pc">
+            <div class="btn-icon-wrapper">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <!-- Icono Windows Oficial Cuadrante -->
+                <path d="M2 3.5l8-1.1v8.8H2V3.5zm9.8-1.4L22 0.5v10.7h-10.2V2.1zm-9.8 10.7h8v8.8l-8-1.1v-7.7zm9.8 0H22v10.7l-10.2-1.6V12.8z"/>
+              </svg>
+            </div>
+            <div class="btn-content">
+              <span class="btn-title">Descargar para PC (Windows)</span>
+              <span class="btn-sub" id="pc-version-badge">v1.0.0 EXE · Portable de 64-bit</span>
             </div>
           </a>
         </div>
 
-        <!-- HUD Simulación en Tiempo Real -->
+        <!-- Panel de Telemetría Mate -->
         <div class="hud-card">
           <div class="hud-header">
-            <span class="hud-title">Telemetría de Enlace en Vivo</span>
-            <span class="hud-state">● MODO NITRO ACTIVO</span>
+            <span class="hud-title">Telemetría de Enlace en Reposo</span>
+            <span class="hud-status-badge">NITRO ACTIVO</span>
           </div>
 
           <div class="hud-metrics">
@@ -109,51 +126,90 @@
     <section class="features" id="caracteristicas">
       <div class="container">
         <div class="section-head">
-          <h2>Ingeniería de Red sin Falsas Promesas</h2>
-          <p>Diferencias claras de rendimiento basadas en APIs nativas de Windows y Android.</p>
+          <h2>Ingeniería de Red Nativa</h2>
+          <p>Optimizaciones de sistema basadas en APIs documentadas de Windows y Android.</p>
         </div>
 
         <div class="features-grid">
-          <!-- Tarjeta 1 -->
+          <!-- Tarjeta 1: Anti-Cheat -->
           <article class="feature-card">
-            <div class="feature-icon">🛡️</div>
+            <div class="feature-icon-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="M9 12l2 2 4-4"/>
+              </svg>
+            </div>
             <h3>Zero Anti-Cheat Risk</h3>
-            <p>No toca, no inyecta ni abre handles de ejecutables ni memoria de juegos. 100% compatible con Vanguard, Easy Anti-Cheat, BattlEye, VAC y Ricochet sin riesgo de baneo.</p>
+            <p>No abre identificadores de proceso, no inyecta bibliotecas ni analiza la memoria de los juegos. Totalmente seguro con Vanguard, EAC, BattlEye, VAC y Ricochet.</p>
           </article>
 
-          <!-- Tarjeta 2 -->
+          <!-- Tarjeta 2: Anycast DNS -->
           <article class="feature-card">
-            <div class="feature-icon">⚡</div>
-            <h3>DNS Anycast LATAM Automático</h3>
-            <p>Conmuta en milisegundos y en caliente al resolver más cercano de la región (Cloudflare, NextDNS, Quad9, Google) sin microcortes de llamada ni desconexiones de partida.</p>
+            <div class="feature-icon-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+              </svg>
+            </div>
+            <h3>DNS Anycast LATAM</h3>
+            <p>Conmuta en caliente al nodo más próximo de la región (Cloudflare, NextDNS, Quad9, Google) sin cortes de llamada ni desconexiones durante la partida.</p>
           </article>
 
-          <!-- Tarjeta 3 -->
+          <!-- Tarjeta 3: Windows Timer -->
           <article class="feature-card">
-            <div class="feature-icon">⏱️</div>
-            <h3>Windows Multimedia Timer 1.0 ms</h3>
-            <p>En PC, acelera la frecuencia del planificador de Windows de 15.6 ms a 1.0 ms exacto, estabilizando el frame pacing y reduciendo drásticamente el retraso del mouse.</p>
+            <div class="feature-icon-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <polyline points="12 6 12 12 16 14"/>
+              </svg>
+            </div>
+            <h3>Planificador Multimedia 1.0 ms</h3>
+            <p>En Windows, eleva la frecuencia de interrupción del planificador del sistema de 15.6 ms a 1.0 ms exacto, estabilizando los tiempos por cuadro y el retardo del cursor.</p>
           </article>
 
-          <!-- Tarjeta 4 -->
+          <!-- Tarjeta 4: Wi-Fi Anti-Lag -->
           <article class="feature-card">
-            <div class="feature-icon">📶</div>
-            <h3>Wi-Fi Anti-Lag Spikes</h3>
-            <p>Bloquea temporalmente el escaneo de redes de vecinos en segundo plano para erradicar los clásicos picos periódicos de 200 ms mientras jugás en Wi-Fi.</p>
+            <div class="feature-icon-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12.55a11 11 0 0 1 14.08 0"/>
+                <path d="M1.42 9a16 16 0 0 1 21.16 0"/>
+                <path d="M8.53 16.11a6 6 0 0 1 6.95 0"/>
+                <line x1="12" y1="20" x2="12.01" y2="20"/>
+              </svg>
+            </div>
+            <h3>Mitigación de Picos en Wi-Fi</h3>
+            <p>Suspende el sondeo de redes adyacentes en segundo plano, erradicando los microtirones periódicos causados por la búsqueda automática de puntos de acceso.</p>
           </article>
 
-          <!-- Tarjeta 5 -->
+          <!-- Tarjeta 5: RAM Working Sets -->
           <article class="feature-card">
-            <div class="feature-icon">🧹</div>
-            <h3>Optimización de Memoria RAM</h3>
-            <p>Purga la memoria en espera y vacía los working sets inactivos para garantizar que el motor del juego corra directo en la memoria física sin paginaciones lentas a disco.</p>
+            <div class="feature-icon-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="4" y="4" width="16" height="16" rx="2"/>
+                <rect x="9" y="9" width="6" height="6"/>
+                <line x1="9" y1="1" x2="9" y2="4"/>
+                <line x1="15" y1="1" x2="15" y2="4"/>
+                <line x1="9" y1="20" x2="9" y2="23"/>
+                <line x1="15" y1="20" x2="15" y2="23"/>
+                <line x1="20" y1="9" x2="23" y2="9"/>
+                <line x1="20" y1="14" x2="23" y2="14"/>
+                <line x1="1" y1="9" x2="4" y2="9"/>
+                <line x1="1" y1="14" x2="4" y2="14"/>
+              </svg>
+            </div>
+            <h3>Gestión de Memoria en Espera</h3>
+            <p>Descarga páginas inactivas de memoria mediante llamadas nativas para evitar paginaciones a disco y mantener el espacio libre disponible para el juego.</p>
           </article>
 
-          <!-- Tarjeta 6 -->
+          <!-- Tarjeta 6: Reversibilidad -->
           <article class="feature-card">
-            <div class="feature-icon">🔄</div>
-            <h3>Reversibilidad Instantánea</h3>
-            <p>Al apagar el botón o salir de la aplicación, el sistema restaura al instante la configuración original de tu proveedor de internet sin dejar procesos zombis.</p>
+            <div class="feature-icon-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="1 4 1 10 7 10"/>
+                <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/>
+              </svg>
+            </div>
+            <h3>Reversibilidad Inmediata</h3>
+            <p>Al detener la suite o cerrar la ventana, el sistema restituye de forma automática los parámetros originales de red de tu adaptador sin dejar procesos residuales.</p>
           </article>
         </div>
       </div>
@@ -164,15 +220,15 @@
       <div class="container">
         <div class="updater-box">
           <div class="updater-info">
-            <span class="badge-tag">SISTEMA OVER-THE-AIR (OTA)</span>
-            <h3>Actualización Directa en la App</h3>
+            <span class="badge-tag">DISTRIBUCIÓN OTA</span>
+            <h3>Buzón de Actualizaciones</h3>
             <p>
-              Tanto la aplicación de Android como la de PC consultan de forma transparente este repositorio para verificar si existe una nueva versión compilada.
+              Tanto la edición para Android como la de Windows consultan este repositorio para verificar la disponibilidad de nuevas compilaciones estables.
             </p>
             <p>
-              Cuando lanzamos una mejora, los usuarios reciben la notificación en pantalla y se actualizan con un solo toque, sin necesidad de desinstalar la versión previa.
+              El flujo permite actualizar directamente sin desinstalar versiones anteriores ni perder tus ajustes guardados.
             </p>
-            <a href="./version.json" target="_blank" class="btn-nav">Ver Endpoint version.json ↗</a>
+            <a href="./version.json" target="_blank" class="btn-secondary-link">Ver version.json ↗</a>
           </div>
 
           <div>
@@ -194,31 +250,45 @@
       </div>
     </section>
 
-    <!-- ================= SEGURIDAD Y POLÍTICAS ================= -->
+    <!-- ================= SEGURIDAD Y PRIVACIDAD ================= -->
     <section class="features" id="seguridad">
       <div class="container">
         <div class="section-head">
-          <h2>Políticas de Privacidad y Seguridad</h2>
-          <p>Compromiso CMR: 100% local, transparente y libre de monetización invasiva.</p>
+          <h2>Privacidad y Seguridad</h2>
+          <p>Compromiso técnico: procesamiento 100% local y libre de servicios publicitarios.</p>
         </div>
 
         <div class="features-grid">
           <article class="feature-card">
-            <div class="feature-icon">🔒</div>
-            <h3>Privacidad 100% Local</h3>
-            <p>Ningún registro de navegación, dirección IP personal ni consulta DNS se recopila, almacena ni comparte con servidores de terceros.</p>
+            <div class="feature-icon-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+              </svg>
+            </div>
+            <h3>Operación 100% Local</h3>
+            <p>Las consultas DNS y las optimizaciones de sistema se resuelven exclusivamente dentro de tu dispositivo. No existen servidores proxy intermediarios que registren tu actividad.</p>
           </article>
 
           <article class="feature-card">
-            <div class="feature-icon">🚫</div>
-            <h3>Cero Publicidad</h3>
-            <p>La suite no incluye bibliotecas ni SDKs publicitarios, banners invasivos ni rastreadores comerciales en segundo plano.</p>
+            <div class="feature-icon-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/>
+                <line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/>
+              </svg>
+            </div>
+            <h3>Cero Rastreadores</h3>
+            <p>La aplicación prescinde de SDKs comerciales, analíticas invasivas y telemetría innecesaria. El consumo de CPU y ancho de banda es puramente funcional.</p>
           </article>
 
           <article class="feature-card">
-            <div class="feature-icon">⚖️</div>
-            <h3>Integridad del Sistema</h3>
-            <p>Todas las optimizaciones emplean llamadas documentadas del sistema operativo y se desactivan limpiamente al cerrar la aplicación.</p>
+            <div class="feature-icon-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+              </svg>
+            </div>
+            <h3>Integridad del Sistema Operativo</h3>
+            <p>Toda modificación temporal se canaliza a través de las interfaces estándar del kernel de Windows y el servicio VPN local de Android, sin parches no verificados.</p>
           </article>
         </div>
       </div>
@@ -234,7 +304,7 @@
         <a href="./version.json" class="footer-link">Buzón de Versiones</a>
         <a href="#seguridad" class="footer-link">Privacidad</a>
       </div>
-      <p>CMR Destructor ADS · CMR Ping Booster Gaming Suite © 2026. Todos los derechos reservados.</p>
+      <p>Creative Maximum Reasoning (CMR) · CMR Ping Booster Suite © 2026. Todos los derechos reservados.</p>
     </div>
   </footer>
 
