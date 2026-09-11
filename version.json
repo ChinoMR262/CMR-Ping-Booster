@@ -1,15 +1,17 @@
 {
   "android": {
     "versionCode": 2,
-    "versionName": "1.0.1",
-    "apkName": "CMR_Ping_Booster_v1.0.1_Release.apk",
-    "downloadUrl": "https://github.com/ChinoMR262/CMR-Ping-Booster/releases/download/v1.0.1/CMR_Ping_Booster_v1.0.1_Release.apk",
-    "directDownloadPath": "downloads/CMR_Ping_Booster_v1.0.1_Release.apk",
+    "versionName": "1.0.0",
+    "apkName": "CMR_Ping_Booster_v1.0.0_Release.apk",
+    "aabName": "CMR_Ping_Booster_v1.0.0_Release.aab",
+    "downloadUrl": "https://github.com/ChinoMR262/CMR-Ping-Booster/releases/download/v1.0.0/CMR_Ping_Booster_v1.0.0_Release.apk",
+    "directDownloadPath": "downloads/CMR_Ping_Booster_v1.0.0_Release.apk",
     "releaseDate": "2026-09-11",
     "minAndroidVersion": "Android 6.0 (Marshmallow)",
     "targetAndroidVersion": "Android 15",
     "changelog": [
-      "Icono adaptativo oficial de faro circular corregido para Samsung One UI y Android Stock",
+      "Versión de lanzamiento de producción oficial para Google Play Console v1.0.0 (2)",
+      "Icono adaptativo oficial circular corregido para Samsung One UI y Android Stock",
       "Sistema de actualización directa OTA sin necesidad de desinstalar",
       "Apagado seguro instantáneo: restaura DNS, Wi-Fi y Modo No Molestar al apagar el botón",
       "Apartado de Información Técnica y Políticas de Privacidad 100% Local en Ajustes"
@@ -23,6 +25,7 @@
     "releaseDate": "2026-09-11",
     "minWindowsVersion": "Windows 10 / Windows 11 (x64)",
     "changelog": [
+      "Sistema de actualización automática OTA oficial integrado con chequeo directo en la nube y reinicio suave",
       "Activadores automáticos inteligentes (Radar de Juegos y DNS Anycast LATAM con ToggleSwitch)",
       "Cero riesgo de baneo (Zero Anti-Cheat Risk) para Vanguard, EAC, BattlEye, VAC y Ricochet",
       "Scheduler Timer a 1.0 ms con estabilización de frame pacing y purga de RAM",
