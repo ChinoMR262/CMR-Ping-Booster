@@ -614,6 +614,183 @@ body::after {
   color: var(--accent-cmr-gold);
 }
 
+/* ================= DOCUMENTO LEGAL & POLÍTICAS (EDITORIAL TECH) ================= */
+.legal-main {
+  padding-top: 110px;
+  padding-bottom: 90px;
+  position: relative;
+  background-color: var(--bg-main);
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(234, 179, 8, 0.04) 0%, transparent 60%),
+    linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+  background-size: 100% 100%, 36px 36px, 36px 36px;
+}
+
+.legal-document {
+  background: #0d1017;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+}
+
+.legal-header {
+  padding: 40px 36px 32px;
+  border-bottom: 1px solid var(--border-subtle);
+  background: linear-gradient(180deg, rgba(18, 21, 30, 0.8) 0%, rgba(13, 16, 23, 0.95) 100%);
+}
+
+.legal-meta-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  margin-top: 16px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.legal-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1px;
+  background: var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.legal-summary-item {
+  background: #0c0f16;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.legal-summary-val {
+  font-family: var(--font-mono);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.legal-summary-lbl {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.legal-content {
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+
+.legal-section {
+  position: relative;
+  padding-left: 20px;
+  border-left: 2px solid var(--border-highlight);
+  transition: border-color var(--transition);
+}
+
+.legal-section:hover {
+  border-left-color: var(--accent-cmr-gold);
+}
+
+.legal-section-title {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.legal-section-num {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--accent-cmr-gold);
+  background: var(--accent-cmr-subtle);
+  padding: 2px 8px;
+  border-radius: var(--radius-xs);
+}
+
+.legal-highlight-box {
+  background: rgba(16, 185, 129, 0.05);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  margin-top: 14px;
+}
+
+.legal-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+  font-size: 0.88rem;
+}
+
+.legal-table th, .legal-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.legal-table th {
+  background: #111520;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.legal-table td {
+  background: transparent;
+}
+
+.contact-channels {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.contact-card {
+  background: #121622;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contact-card:hover {
+  border-color: var(--border-highlight);
+}
+
+.contact-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+.contact-email {
+  font-family: var(--font-mono);
+  color: var(--accent-cmr-gold);
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
   .hero-title {
@@ -636,5 +813,9 @@ body::after {
 
   .nav-links {
     display: none;
+  }
+
+  .legal-header, .legal-content {
+    padding: 24px 20px;
   }
 }
