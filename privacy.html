@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Política de Privacidad y Términos de Servicio · CMR Ping Booster</title>
+  
+  <meta name="description" content="Política de privacidad oficial y términos legales de CMR Ping Booster para Android. Cumplimiento con las políticas de Google Play Store y uso del servicio VpnService.">
+  <meta name="theme-color" content="#090a0f">
+  
+  <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+  <link rel="apple-touch-icon" href="./assets/logo.png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="./index.html" class="brand">
+        <img src="./assets/logo.png" alt="Logo Oficial CMR" class="brand-logo">
+        <div class="brand-text">
+          <h1>CMR Ping Booster</h1>
+          <span>Creative Maximum Reasoning</span>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="./index.html" class="nav-link">Inicio</a>
+        <a href="./index.html#descargas" class="nav-link">Descargar App</a>
+        <a href="./index.html#pc-version" class="nav-link">Versión PC Gratis</a>
+        <a href="./index.html#caracteristicas" class="nav-link">Tecnología</a>
+      </nav>
+    </div>
+  </header>
+
+  <main style="padding-top: 110px; padding-bottom: 80px;">
+    <div class="container" style="max-width: 900px;">
+      
+      <div style="margin-bottom: 40px; border-bottom: 1px solid var(--border-subtle); padding-bottom: 24px;">
+        <span class="badge-tag">DOCUMENTACIÓN OFICIAL PLAY STORE</span>
+        <h1 style="font-size: 2.2rem; font-weight: 700; margin-top: 12px; margin-bottom: 8px;">Política de Privacidad y Aviso Legal</h1>
+        <p style="color: var(--text-muted); font-size: 0.95rem;">Última actualización y fecha de vigor: 11 de Septiembre de 2026 · Válido para Google Play Store</p>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 32px; color: var(--text-secondary); font-size: 0.98rem; line-height: 1.75;">
+
+        <section style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 24px;">
+          <h2 style="color: var(--text-primary); font-size: 1.3rem; margin-bottom: 12px;">1. Identificación del Desarrollador y Aplicación</h2>
+          <p>Esta política de privacidad aplica a la aplicación móvil <strong>CMR Ping Booster</strong> (Identificador de paquete: <code>com.cmr.pingbooster</code>), desarrollada y mantenida por el equipo de <strong>Creative Maximum Reasoning (CMR)</strong>.</p>
+        </section>
+
+        <section style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 24px;">
+          <h2 style="color: var(--text-primary); font-size: 1.3rem; margin-bottom: 12px;">2. Declaración de Recopilación y Uso de Datos</h2>
+          <p style="margin-bottom: 12px;"><strong>CMR Ping Booster es una aplicación 100% privada y local.</strong></p>
+          <ul style="padding-left: 20px; display: flex; flex-direction: column; gap: 8px;">
+            <li><strong>Cero recolección de datos personales:</strong> No solicitamos ni recopilamos nombres, correos electrónicos, números telefónicos, listas de contactos ni identificadores de hardware.</li>
+            <li><strong>Cero seguimiento de tráfico:</strong> No se registra, almacena, analiza ni transmite el historial de navegación, nombres de dominio ni la actividad web realizada en el dispositivo.</li>
+            <li><strong>Sin servidores intermediarios externos:</strong> La aplicación no reasigna la conexión a través de ningún servidor proxy ni VPN propio de recopilación de datos.</li>
+            <li><strong>Sin SDKs ni analíticas publicitarias de terceros:</strong> La aplicación carece de código de rastreo comercial o anuncios.</li>
+          </ul>
+        </section>
+
+        <section style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 24px;">
+          <h2 style="color: var(--text-primary); font-size: 1.3rem; margin-bottom: 12px;">3. Declaración de Uso del Servicio VpnService (Google Play Policy)</h2>
+          <p style="margin-bottom: 12px;">En estricto cumplimiento con las políticas para desarrolladores de Google Play respecto al permiso <code>android.permission.BIND_VPN_SERVICE</code> (VpnService API):</p>
+          <ul style="padding-left: 20px; display: flex; flex-direction: column; gap: 8px;">
+            <li><strong>Propósito exclusivo de la API VpnService:</strong> CMR Ping Booster utiliza la API <code>VpnService</code> para establecer un túnel de interfaz en bucle local (Loopback VPN) dentro del sistema operativo Android. Su único propósito técnico es interceptar y enrutar las solicitudes de resolución de nombres de dominio (DNS) hacia servidores DNS Anycast optimizados para juegos (como Cloudflare 1.1.1.1, Quad9 9.9.9.9 o Google 8.8.8.8).</li>
+            <li><strong>No es una VPN tradicional de tunelización completa:</strong> No redirige el tráfico de datos generales de Internet a través de un servidor remoto, no cifra el tráfico de otras aplicaciones ni oculta la dirección IP real del usuario.</li>
+            <li><strong>Transparencia y control total:</strong> El usuario puede activar y desactivar la VPN local de manera voluntaria e instantánea mediante la interfaz principal de la app. Al desactivar el booster, la VPN local se destruye inmediatamente y la configuración de red retorna al estado predeterminado del sistema.</li>
+          </ul>
+        </section>
+
+        <section style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 24px;">
+          <h2 style="color: var(--text-primary); font-size: 1.3rem; margin-bottom: 12px;">4. Permisos Requeridos por el Sistema Android</h2>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <div>
+              <code style="color: var(--accent-emerald);">INTERNET</code>: Permite resolver consultas DNS nativas y verificar la latencia estimada mediante sockets locales.
+            </div>
+            <div>
+              <code style="color: var(--accent-emerald);">ACCESS_NETWORK_STATE</code> & <code style="color: var(--accent-emerald);">ACCESS_WIFI_STATE</code>: Permiten detectar si el dispositivo está conectado por Wi-Fi o datos móviles para adaptar los perfiles de buffer.
+            </div>
+            <div>
+              <code style="color: var(--accent-emerald);">POST_NOTIFICATIONS</code> (Android 13+): Utilizado exclusivamente para mostrar el estado del servicio activo en la barra de estado.
+            </div>
+          </div>
+        </section>
+
+        <section style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 24px;">
+          <h2 style="color: var(--text-primary); font-size: 1.3rem; margin-bottom: 12px;">5. Versión de Escritorio para PC (Complementaria y Gratuita)</h2>
+          <p>CMR Ping Booster ofrece de manera complementaria una versión portable para sistemas Microsoft Windows PC. Dicha versión es de distribución libre y gratuita, operando de forma autónoma a través de APIs de red nativas de Windows sin inyección de memoria ni interacción con el ejecutable de Android.</p>
+        </section>
+
+        <section style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 24px;">
+          <h2 style="color: var(--text-primary); font-size: 1.3rem; margin-bottom: 12px;">6. Propiedad Intelectual y Aviso Legal</h2>
+          <p style="margin-bottom: 8px;">Todos los derechos reservados © 2026 <strong>Creative Maximum Reasoning (CMR)</strong>.</p>
+          <p>Las marcas comerciales, nombres de juegos y logotipos mencionados en este sitio web (como Counter-Strike, Valorant, League of Legends, Fortnite, Roblox, Windows o Android) pertenecen a sus respectivos propietarios y se citan únicamente con fines informativos de compatibilidad de latencia.</p>
+        </section>
+
+        <section style="background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 24px;">
+          <h2 style="color: var(--text-primary); font-size: 1.3rem; margin-bottom: 12px;">7. Contacto de Soporte y Consultas</h2>
+          <p>Para consultas sobre esta política de privacidad o soporte técnico de la aplicación en Google Play Store, podés contactarnos mediante el canal oficial de la organización:</p>
+          <p style="margin-top: 8px;"><strong>Email de soporte:</strong> <code>soporte.cmr.booster@gmail.com</code></p>
+          <p><strong>Sitio Web Oficial:</strong> <a href="https://chinomr262.github.io/CMR-Ping-Booster/" style="color: var(--accent-emerald);">https://chinomr262.github.io/CMR-Ping-Booster/</a></p>
+        </section>
+
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="./index.html#descargas" class="footer-link">Descargar App</a>
+        <a href="./index.html#pc-version" class="footer-link">Versión PC Gratis</a>
+        <a href="./version.json" class="footer-link">Buzón de Versiones</a>
+        <a href="./privacy.html" class="footer-link">Política de Privacidad</a>
+      </div>
+      <p>Creative Maximum Reasoning (CMR) · CMR Ping Booster Suite © 2026. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
