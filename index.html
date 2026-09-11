@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CMR Ping Booster · Suite de Optimización de Red y Latencia Gaming (Android & PC)</title>
+  
+  <!-- Metadatos SEO y Redes -->
+  <meta name="description" content="Suite de optimización de red, mitigación de jitter y enrutamiento DNS Anycast para juegos competitivos en Android y Windows PC. Cero riesgo de anti-cheat.">
+  <meta name="theme-color" content="#0a0c10">
+  <meta property="og:title" content="CMR Ping Booster · Suite Gaming de Baja Latencia">
+  <meta property="og:description" content="Optimización de red y sistema en Android y PC con estética negro mate minimalista y DNS Anycast LATAM.">
+  <meta property="og:type" content="website">
+  
+  <!-- Favicon e Icono Oficial -->
+  <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
+  <link rel="apple-touch-icon" href="./assets/logo.png">
+  
+  <!-- Tipografía Google Fonts Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Hoja de Estilos -->
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+
+  <!-- ================= BARRA DE NAVEGACIÓN ================= -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="brand">
+        <img src="./assets/logo.png" alt="Logo CMR Faro" class="brand-logo">
+        <div class="brand-text">
+          <h1>CMR Ping Booster</h1>
+          <span>Suite Oficial Gaming</span>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="#descargas" class="nav-link">Descargas</a>
+        <a href="#caracteristicas" class="nav-link">Tecnología</a>
+        <a href="#actualizaciones" class="nav-link">Actualizador OTA</a>
+        <a href="#seguridad" class="nav-link">Seguridad</a>
+        <a href="#descargas" class="btn-nav">Obtener App</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ================= HERO SECTION ================= -->
+    <section class="hero">
+      <div class="container">
+        <div class="badge-live">
+          <span class="dot-green"></span>
+          <span>Red Anycast LATAM y Entorno Nitro En Línea</span>
+        </div>
+        
+        <h2 class="hero-title">Menos Latencia.<br><span class="highlight">Cero Interrupciones.</span></h2>
+        
+        <p class="hero-subtitle">
+          Optimizá el ping, eliminá los microtirones de Wi-Fi y estabilizá el frame pacing de tus partidas en Android y Windows PC con una arquitectura 100% Anti-Cheat Safe y estética negro mate minimalista.
+        </p>
+
+        <!-- Botones de Descarga Directa -->
+        <div class="cta-group" id="descargas">
+          <a href="./CMR_Ping_Booster_v1.0.1_Release.apk" download class="btn-primary" id="btn-dl-android">
+            <span style="font-size: 1.4rem;">🤖</span>
+            <div>
+              <span>Descargar para Android</span>
+              <span class="btn-sub" id="android-version-badge">v1.0.1 • Actualizable sin desinstalar</span>
+            </div>
+          </a>
+
+          <a href="https://github.com/ChinoMR262/CMR-Ping-Booster/releases/latest/download/CMR_Ping_Booster_PC.exe" class="btn-secondary" id="btn-dl-pc">
+            <span style="font-size: 1.4rem;">🖥️</span>
+            <div>
+              <span>Descargar para PC (Windows)</span>
+              <span class="btn-sub" id="pc-version-badge">v1.0.0 • Portable sin instalación</span>
+            </div>
+          </a>
+        </div>
+
+        <!-- HUD Simulación en Tiempo Real -->
+        <div class="hud-card">
+          <div class="hud-header">
+            <span class="hud-title">Telemetría de Enlace en Vivo</span>
+            <span class="hud-state">● MODO NITRO ACTIVO</span>
+          </div>
+
+          <div class="hud-metrics">
+            <div class="metric-box">
+              <div class="metric-val"><span id="live-ping-val">21</span><span class="metric-unit">ms</span></div>
+              <div class="metric-lbl">Latencia Backbone Real</div>
+            </div>
+            <div class="metric-box">
+              <div class="metric-val"><span id="live-jitter-val">1.2</span><span class="metric-unit">ms</span></div>
+              <div class="metric-lbl">Jitter / Estabilidad</div>
+            </div>
+          </div>
+
+          <div class="radar-live-strip" id="radar-live-text">
+            CS2 Relay AR: 18ms   •   Valorant LAS: 22ms   •   LoL Cono Sur: 19ms   •   Fortnite BR: 28ms   •   Roblox: 31ms
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CARACTERÍSTICAS TÉCNICAS ================= -->
+    <section class="features" id="caracteristicas">
+      <div class="container">
+        <div class="section-head">
+          <h2>Ingeniería de Red sin Falsas Promesas</h2>
+          <p>Diferencias claras de rendimiento basadas en APIs nativas de Windows y Android.</p>
+        </div>
+
+        <div class="features-grid">
+          <!-- Tarjeta 1 -->
+          <article class="feature-card">
+            <div class="feature-icon">🛡️</div>
+            <h3>Zero Anti-Cheat Risk</h3>
+            <p>No toca, no inyecta ni abre handles de ejecutables ni memoria de juegos. 100% compatible con Vanguard, Easy Anti-Cheat, BattlEye, VAC y Ricochet sin riesgo de baneo.</p>
+          </article>
+
+          <!-- Tarjeta 2 -->
+          <article class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>DNS Anycast LATAM Automático</h3>
+            <p>Conmuta en milisegundos y en caliente al resolver más cercano de la región (Cloudflare, NextDNS, Quad9, Google) sin microcortes de llamada ni desconexiones de partida.</p>
+          </article>
+
+          <!-- Tarjeta 3 -->
+          <article class="feature-card">
+            <div class="feature-icon">⏱️</div>
+            <h3>Windows Multimedia Timer 1.0 ms</h3>
+            <p>En PC, acelera la frecuencia del planificador de Windows de 15.6 ms a 1.0 ms exacto, estabilizando el frame pacing y reduciendo drásticamente el retraso del mouse.</p>
+          </article>
+
+          <!-- Tarjeta 4 -->
+          <article class="feature-card">
+            <div class="feature-icon">📶</div>
+            <h3>Wi-Fi Anti-Lag Spikes</h3>
+            <p>Bloquea temporalmente el escaneo de redes de vecinos en segundo plano para erradicar los clásicos picos periódicos de 200 ms mientras jugás en Wi-Fi.</p>
+          </article>
+
+          <!-- Tarjeta 5 -->
+          <article class="feature-card">
+            <div class="feature-icon">🧹</div>
+            <h3>Optimización de Memoria RAM</h3>
+            <p>Purga la memoria en espera y vacía los working sets inactivos para garantizar que el motor del juego corra directo en la memoria física sin paginaciones lentas a disco.</p>
+          </article>
+
+          <!-- Tarjeta 6 -->
+          <article class="feature-card">
+            <div class="feature-icon">🔄</div>
+            <h3>Reversibilidad Instantánea</h3>
+            <p>Al apagar el botón o salir de la aplicación, el sistema restaura al instante la configuración original de tu proveedor de internet sin dejar procesos zombis.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SISTEMA DE ACTUALIZACIONES OTA ================= -->
+    <section class="updater-section" id="actualizaciones">
+      <div class="container">
+        <div class="updater-box">
+          <div class="updater-info">
+            <span class="badge-tag">SISTEMA OVER-THE-AIR (OTA)</span>
+            <h3>Actualización Directa en la App</h3>
+            <p>
+              Tanto la aplicación de Android como la de PC consultan de forma transparente este repositorio para verificar si existe una nueva versión compilada.
+            </p>
+            <p>
+              Cuando lanzamos una mejora, los usuarios reciben la notificación en pantalla y se actualizan con un solo toque, sin necesidad de desinstalar la versión previa.
+            </p>
+            <a href="./version.json" target="_blank" class="btn-nav">Ver Endpoint version.json ↗</a>
+          </div>
+
+          <div>
+            <pre class="json-viewer"><code>{
+  "android": {
+    "versionCode": 2,
+    "versionName": "1.0.1",
+    "apkName": "CMR_Ping_Booster_v1.0.1_Release.apk",
+    "status": "Actualizable directamente"
+  },
+  "pc": {
+    "version": "1.0.0",
+    "exeName": "CMR Ping Booster PC.exe",
+    "status": "Portable autónomo"
+  }
+}</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SEGURIDAD Y POLÍTICAS ================= -->
+    <section class="features" id="seguridad">
+      <div class="container">
+        <div class="section-head">
+          <h2>Políticas de Privacidad y Seguridad</h2>
+          <p>Compromiso CMR: 100% local, transparente y libre de monetización invasiva.</p>
+        </div>
+
+        <div class="features-grid">
+          <article class="feature-card">
+            <div class="feature-icon">🔒</div>
+            <h3>Privacidad 100% Local</h3>
+            <p>Ningún registro de navegación, dirección IP personal ni consulta DNS se recopila, almacena ni comparte con servidores de terceros.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">🚫</div>
+            <h3>Cero Publicidad</h3>
+            <p>La suite no incluye bibliotecas ni SDKs publicitarios, banners invasivos ni rastreadores comerciales en segundo plano.</p>
+          </article>
+
+          <article class="feature-card">
+            <div class="feature-icon">⚖️</div>
+            <h3>Integridad del Sistema</h3>
+            <p>Todas las optimizaciones emplean llamadas documentadas del sistema operativo y se desactivan limpiamente al cerrar la aplicación.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="#descargas" class="footer-link">Descargas</a>
+        <a href="#caracteristicas" class="footer-link">Tecnología</a>
+        <a href="./version.json" class="footer-link">Buzón de Versiones</a>
+        <a href="#seguridad" class="footer-link">Privacidad</a>
+      </div>
+      <p>CMR Destructor ADS · CMR Ping Booster Gaming Suite © 2026. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
