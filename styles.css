@@ -74,17 +74,20 @@ body {
 body::before {
   content: "";
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  top: -24px;
+  left: -24px;
+  width: calc(100vw + 48px);
+  height: calc(100vh + 48px);
   background-image: 
-    radial-gradient(ellipse at 50% 20%, rgba(37, 41, 50, 0.20) 0%, rgba(12, 15, 22, 0.65) 85%),
+    radial-gradient(ellipse at 50% 20%, rgba(37, 41, 50, 0.25) 0%, rgba(12, 15, 22, 0.70) 85%),
     url("./assets/radar_bg_hd.jpg");
   background-size: cover, cover;
   background-position: center top, center top;
   background-repeat: no-repeat, no-repeat;
-  opacity: 0.70;
+  filter: blur(28px);
+  -webkit-filter: blur(28px);
+  transform: scale(1.06);
+  opacity: 0.75;
   pointer-events: none;
   z-index: -1;
 }
