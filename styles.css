@@ -4,25 +4,25 @@
    ========================================================================== */
 
 :root {
-  /* Fondo Sólido Grafito & Carbón con Matiz Bosque Mate */
-  --bg-canvas: #090c0a;
-  --bg-panel: #101613;
-  --bg-panel-elevated: #141c18;
-  --bg-panel-subtle: #0c120f;
-  --bg-input: #080b09;
+  /* Fondo Táctico Carbón & Pizarra Antracita (Sincronizado con el Emblema de Radar) */
+  --bg-canvas: #0c0f16;
+  --bg-panel: #121620;
+  --bg-panel-elevated: #181d2a;
+  --bg-panel-subtle: #0e121a;
+  --bg-input: #090c12;
 
-  /* Bordes de Corte Técnico y Separadores con Pátina Mineral */
-  --border-dim: #18231c;
-  --border-subtle: #223027;
-  --border-mid: #2f4236;
-  --border-strong: #405849;
+  /* Bordes de Corte Técnico y Separadores con Tono Acero y Pizarra */
+  --border-dim: #1c2331;
+  --border-subtle: #262f42;
+  --border-mid: #34415a;
+  --border-strong: #48597a;
 
-  /* Acentos Mate Calibrados (Bronce Industrial, Verde Óxido Artesanal, Gris Acero) */
+  /* Acentos Mate Calibrados (Bronce Industrial, Verde Radar de Telecomunicaciones, Gris Acero) */
   --accent-gold: #cf9b3c;
   --accent-gold-subtle: rgba(207, 155, 60, 0.08);
   --accent-gold-border: rgba(207, 155, 60, 0.25);
-  --accent-green: #5b9279;
-  --accent-green-subtle: rgba(91, 146, 121, 0.12);
+  --accent-green: #38a169;
+  --accent-green-subtle: rgba(56, 161, 105, 0.12);
   --accent-steel: #8b93a3;
   --accent-steel-subtle: rgba(139, 147, 163, 0.10);
 
@@ -68,9 +68,9 @@ body {
   min-height: 100vh;
 }
 
-/* ================= TEXTURA DE FONDO VERDE PIZARRA MATE (ARTESANAL) =================
-   Imagen de textura física de grano mineral y fibra vegetal verdosa mate,
-   combinada con un halo sutil de bronce cálido superior. */
+/* ================= ATMÓSFERA DE FONDO DE INSTRUMENTACIÓN & RADAR =================
+   Fondo ambiental oficial derivado del emblema de radar y telemetría de CMR Ping Booster.
+   Refleja la identidad visual de la aplicación con degradé cenital carbón-acero y presencia de señal. */
 body::before {
   content: "";
   position: fixed;
@@ -79,13 +79,12 @@ body::before {
   width: 100vw;
   height: 100vh;
   background-image: 
-    radial-gradient(circle at 50% 0%, rgba(207, 155, 60, 0.045) 0%, transparent 65%),
-    radial-gradient(circle at 50% 45%, rgba(91, 146, 121, 0.06) 0%, transparent 80%),
-    url("./assets/green_slate_texture.jpg");
-  background-size: 100% 100%, 100% 100%, 600px 600px;
-  background-position: center top, center center, 0 0;
-  background-repeat: no-repeat, no-repeat, repeat;
-  opacity: 0.38;
+    radial-gradient(ellipse at 50% 20%, rgba(37, 41, 50, 0.20) 0%, rgba(12, 15, 22, 0.65) 85%),
+    url("./assets/radar_bg_hd.jpg");
+  background-size: cover, cover;
+  background-position: center top, center top;
+  background-repeat: no-repeat, no-repeat;
+  opacity: 0.70;
   pointer-events: none;
   z-index: -1;
 }
@@ -248,9 +247,9 @@ body::before {
 }
 
 .badge-pill-status.android {
-  border-color: rgba(91, 146, 121, 0.35);
+  border-color: rgba(56, 161, 105, 0.35);
   color: #a7f3d0;
-  background: rgba(91, 146, 121, 0.08);
+  background: rgba(56, 161, 105, 0.08);
 }
 
 .badge-pill-status.pc {
@@ -284,7 +283,7 @@ body::before {
   gap: 9px;
   align-self: flex-start;
   background: rgba(16, 26, 20, 0.65);
-  border: 1px solid rgba(91, 146, 121, 0.35);
+  border: 1px solid rgba(56, 161, 105, 0.35);
   padding: 5px 12px;
   border-radius: var(--radius-xs);
   font-size: 0.72rem;
@@ -352,13 +351,13 @@ body::before {
 
 .btn-download:hover {
   background: #14221a;
-  border-color: rgba(91, 146, 121, 0.55);
+  border-color: rgba(56, 161, 105, 0.55);
   box-shadow: 0 6px 20px rgba(16, 32, 23, 0.40);
   transform: translateY(-2px);
 }
 
 .btn-download:hover .btn-icon-wrapper {
-  border-color: rgba(91, 146, 121, 0.50);
+  border-color: rgba(56, 161, 105, 0.50);
   background: #0c1510;
   color: #a7f3d0;
 }
@@ -418,8 +417,8 @@ body::before {
 
 .btn-secondary-action:hover {
   color: var(--text-pure);
-  border-color: rgba(91, 146, 121, 0.45);
-  background: rgba(91, 146, 121, 0.12);
+  border-color: rgba(56, 161, 105, 0.45);
+  background: rgba(56, 161, 105, 0.12);
   transform: translateY(-1px);
 }
 
@@ -433,7 +432,7 @@ body::before {
 }
 
 .telemetry-rack:hover {
-  border-color: rgba(91, 146, 121, 0.40);
+  border-color: rgba(56, 161, 105, 0.40);
   box-shadow: 0 8px 24px rgba(16, 30, 22, 0.35);
 }
 
@@ -614,7 +613,7 @@ body::before {
 
 .spec-row:hover {
   background: rgba(18, 30, 23, 0.45);
-  border-color: rgba(91, 146, 121, 0.30);
+  border-color: rgba(56, 161, 105, 0.30);
   padding-left: 16px;
 }
 
@@ -714,7 +713,7 @@ body::before {
 
 .arch-compare-box:hover {
   background: #111b15;
-  border-color: rgba(91, 146, 121, 0.40);
+  border-color: rgba(56, 161, 105, 0.40);
   box-shadow: 0 6px 20px rgba(16, 32, 23, 0.30);
 }
 
@@ -841,7 +840,7 @@ body::before {
 
 .audit-cell:hover {
   background: #132219;
-  box-shadow: inset 0 0 0 1px rgba(91, 146, 121, 0.45);
+  box-shadow: inset 0 0 0 1px rgba(56, 161, 105, 0.45);
 }
 
 .audit-cell:hover h3 {
