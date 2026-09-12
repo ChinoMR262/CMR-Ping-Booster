@@ -18,24 +18,24 @@
   --border-mid: #323a4b;
   --border-strong: #454f64;
 
-  /* Acentos Mate Calibrados (Bronce Industrial, Verde Telemetría, Titanio) */
+  /* Acentos Mate Calibrados (Bronce Industrial, Verde Óxido, Gris Acero) */
   --accent-gold: #cf9b3c;
   --accent-gold-subtle: rgba(207, 155, 60, 0.08);
   --accent-gold-border: rgba(207, 155, 60, 0.25);
-  --accent-green: #34d399;
-  --accent-green-subtle: rgba(52, 211, 153, 0.08);
-  --accent-cyan: #38bdf8;
-  --accent-cyan-subtle: rgba(56, 189, 248, 0.08);
+  --accent-green: #5b9279;
+  --accent-green-subtle: rgba(91, 146, 121, 0.10);
+  --accent-steel: #8b93a3;
+  --accent-steel-subtle: rgba(139, 147, 163, 0.10);
 
-  /* Tipografía y Escala de Contraste Mate */
+  /* Tipografía Técnica de Ingeniería (IBM Plex) */
   --text-pure: #f8fafc;
   --text-primary: #e2e8f0;
   --text-secondary: #94a3b8;
   --text-muted: #5f6b7e;
   --text-code: #cbd5e1;
 
-  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  --font-mono: 'JetBrains Mono', 'Consolas', monospace;
+  --font-main: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'Consolas', monospace;
 
   --radius-xs: 2px;
   --radius-sm: 4px;
@@ -69,9 +69,9 @@ body {
   min-height: 100vh;
 }
 
-/* ================= TEXTURA DE FONDO SÓLIDO TÉCNICO =================
-   Trama de micromalla táctil mate (puntos y retícula de ingeniería de 28px)
-   que aporta profundidad física tangible sin gradientes brillantes de IA. */
+/* ================= TEXTURA DE FONDO FÍSICO MATE =================
+   Grano sutil e imperfección física orgánica (ruido mineral y halo de bronce tenue)
+   en reemplazo de retículas y patrones matemáticos regulares. */
 body::before {
   content: "";
   position: fixed;
@@ -80,12 +80,10 @@ body::before {
   width: 100vw;
   height: 100vh;
   background-image: 
-    radial-gradient(circle at 50% 0%, rgba(207, 155, 60, 0.025) 0%, transparent 60%),
-    linear-gradient(to right, rgba(255, 255, 255, 0.012) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.012) 1px, transparent 1px),
-    radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
-  background-size: 100% 100%, 28px 28px, 28px 28px, 28px 28px;
-  background-position: center top, 0 0, 0 0, 14px 14px;
+    radial-gradient(circle at 50% 0%, rgba(207, 155, 60, 0.035) 0%, transparent 65%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E");
+  background-size: 100% 100%, 180px 180px;
+  background-position: center top, 0 0;
   pointer-events: none;
   z-index: -1;
 }
@@ -103,9 +101,7 @@ body::before {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(9, 10, 13, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: var(--bg-canvas);
   border-bottom: 1px solid var(--border-dim);
   padding: 13px 0;
 }
@@ -231,7 +227,7 @@ body::before {
 
 .lang-option.active {
   background: var(--border-subtle);
-  color: var(--accent-cyan);
+  color: var(--text-pure);
 }
 
 .badge-pill-status {
@@ -250,15 +246,15 @@ body::before {
 }
 
 .badge-pill-status.android {
-  border-color: rgba(52, 211, 153, 0.25);
+  border-color: rgba(91, 146, 121, 0.35);
   color: #a7f3d0;
-  background: rgba(16, 185, 129, 0.06);
+  background: rgba(91, 146, 121, 0.08);
 }
 
 .badge-pill-status.pc {
-  border-color: rgba(56, 189, 248, 0.25);
-  color: #bae6fd;
-  background: rgba(56, 189, 248, 0.06);
+  border-color: rgba(139, 147, 163, 0.30);
+  color: var(--text-secondary);
+  background: rgba(139, 147, 163, 0.08);
 }
 
 /* ================= HERO POSTER & PRESENTACIÓN ================= */
@@ -303,7 +299,16 @@ body::before {
   height: 6px;
   background: var(--accent-green);
   border-radius: 50%;
-  box-shadow: 0 0 6px var(--accent-green);
+  animation: status-pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes status-pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.45;
+  }
 }
 
 .hero-title {
