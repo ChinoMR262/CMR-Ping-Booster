@@ -2,34 +2,31 @@
   "android": {
     "versionCode": 2,
     "versionName": "1.0.0",
-    "apkName": "CMR_Ping_Booster_v1.0.0_Release.apk",
-    "aabName": "CMR_Ping_Booster_v1.0.0_Release.aab",
-    "downloadUrl": "https://github.com/ChinoMR262/CMR-Ping-Booster/releases/download/v1.0.0/CMR_Ping_Booster_v1.0.0_Release.apk",
-    "directDownloadPath": "downloads/CMR_Ping_Booster_v1.0.0_Release.apk",
-    "releaseDate": "2026-09-11",
-    "minAndroidVersion": "Android 6.0 (Marshmallow)",
-    "targetAndroidVersion": "Android 15",
-    "changelog": [
-      "Versión de lanzamiento de producción oficial para Google Play Console v1.0.0 (2)",
-      "Icono adaptativo oficial circular corregido para Samsung One UI y Android Stock",
-      "Sistema de actualización directa OTA sin necesidad de desinstalar",
-      "Apagado seguro instantáneo: restaura DNS, Wi-Fi y Modo No Molestar al apagar el botón",
-      "Apartado de Información Técnica y Políticas de Privacidad 100% Local en Ajustes"
+    "packageId": "com.cmr.pingbooster",
+    "distribution": "Google Play Store (Prueba Cerrada)",
+    "minAndroidVersion": "Android 7.0 (API 24)",
+    "targetAndroidVersion": "Android 15 (API 35)",
+    "releaseDate": "2026-09-12",
+    "features": [
+      "Enrutamiento Anycast DNS en bucle local de ultra-baja latencia",
+      "Mitigación de fluctuaciones y jitter en Wi-Fi para títulos competitivos",
+      "Procesamiento 100% en el dispositivo bajo política de privacidad Zero-Data",
+      "Restauración atómica de la conectividad al desactivar el servicio",
+      "Cumplimiento riguroso de normativas VpnService de Google Play Store"
     ]
   },
   "pc": {
     "version": "1.0.0",
-    "exeName": "CMR Ping Booster PC.exe",
-    "downloadUrl": "https://github.com/ChinoMR262/CMR-Ping-Booster/releases/download/v1.0.0/CMR_Ping_Booster_PC.exe",
-    "directDownloadPath": "downloads/CMR_Ping_Booster_PC.exe",
-    "releaseDate": "2026-09-11",
+    "exeName": "CMR_Ping_Booster_PC.exe",
+    "downloadUrl": "https://chinomr262.github.io/CMR-Ping-Booster/CMR_Ping_Booster_PC.exe",
+    "releaseDate": "2026-09-12",
     "minWindowsVersion": "Windows 10 / Windows 11 (x64)",
     "changelog": [
-      "Sistema de actualización automática OTA oficial integrado con chequeo directo en la nube y reinicio suave",
-      "Activadores automáticos inteligentes (Radar de Juegos y DNS Anycast LATAM con ToggleSwitch)",
-      "Cero riesgo de baneo (Zero Anti-Cheat Risk) para Vanguard, EAC, BattlEye, VAC y Ricochet",
-      "Scheduler Timer a 1.0 ms con estabilización de frame pacing y purga de RAM",
-      "Icono oficial en barra de tareas y salida limpia desde la bandeja del sistema sin procesos zombis"
+      "Actualización directa integrada desde el mismo programa: presionás actualizar y busca/aplica la nueva versión automáticamente",
+      "Resolución de temporizador Multimedia Timer a 1.0 ms exactos para estabilización de frame pacing",
+      "Purga selectiva de memoria de trabajo (Working Sets) de RAM sin interrupciones",
+      "Optimización de socket Winsock Anycast para servidores de juegos en Cono Sur y LATAM",
+      "Compatibilidad total Zero Anti-Cheat: sin inyección de DLLs ni acceso a memoria de juegos (Vanguard, EAC, BattlEye, VAC, Ricochet)"
     ]
   }
 }

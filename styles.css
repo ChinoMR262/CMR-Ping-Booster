@@ -114,6 +114,13 @@ body::before {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .brand {
@@ -188,6 +195,70 @@ body::before {
   background: var(--border-dim);
   border-color: var(--border-mid);
   color: var(--text-pure);
+}
+
+/* Selector de Idioma (ES / EN) */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  background: var(--bg-panel-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 2px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+}
+
+.lang-option {
+  padding: 3px 8px;
+  color: var(--text-muted);
+  text-decoration: none;
+  border-radius: 2px;
+  transition: all var(--ease-fast);
+  line-height: 1;
+}
+
+.lang-option:hover {
+  color: var(--text-primary);
+}
+
+.lang-option.active {
+  background: var(--border-subtle);
+  color: var(--accent-cyan);
+}
+
+.badge-pill-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  font-family: var(--font-mono);
+  font-size: 0.70rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-panel-subtle);
+  color: var(--text-secondary);
+}
+
+.badge-pill-status.android {
+  border-color: rgba(52, 211, 153, 0.25);
+  color: #a7f3d0;
+  background: rgba(16, 185, 129, 0.06);
+}
+
+.badge-pill-status.pc {
+  border-color: rgba(56, 189, 248, 0.25);
+  color: #bae6fd;
+  background: rgba(56, 189, 248, 0.06);
 }
 
 /* ================= HERO POSTER & PRESENTACIÓN ================= */

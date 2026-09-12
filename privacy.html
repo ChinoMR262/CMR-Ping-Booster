@@ -32,12 +32,20 @@
           <span>Creative Maximum Reasoning</span>
         </div>
       </a>
-      <nav class="nav-links">
-        <a href="./index.html" class="nav-link">Inicio</a>
-        <a href="./index.html#app-android" class="nav-link">App Android</a>
-        <a href="./index.html#arquitectura" class="nav-link">Especificación</a>
-        <a href="./index.html#pc-version" class="nav-link">Versión PC</a>
-      </nav>
+      <div class="nav-wrapper">
+        <nav class="nav-links">
+          <a href="./index.html" class="nav-link">Inicio</a>
+          <a href="./index.html#app-android" class="nav-link">App Android</a>
+          <a href="./index.html#suite-pc" class="nav-link">Suite PC</a>
+          <a href="./pc-privacy.html" class="nav-link">Política PC</a>
+        </nav>
+        <div class="nav-actions">
+          <div class="lang-switch" aria-label="Selector de idioma">
+            <a href="./privacy.html" class="lang-option active">ES</a>
+            <a href="./en/privacy.html" class="lang-option">EN</a>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -47,13 +55,16 @@
       <article class="legal-document">
         
         <div class="legal-header">
-          <span class="head-meta-code">ESPECIFICACIÓN DE PRIVACIDAD & SEGURIDAD</span>
+          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+            <span class="badge-pill-status android">ANDROID GOOGLE PLAY</span>
+            <span class="head-meta-code">ESPECIFICACIÓN DE PRIVACIDAD & SEGURIDAD</span>
+          </div>
           <h1>Política de Privacidad Oficial</h1>
           
           <div class="legal-meta-strip">
             <span>Paquete: <code>com.cmr.pingbooster</code></span>
             <span>•</span>
-            <span>Versión: 1.0.0 (Google Play Production)</span>
+            <span>Canal: Google Play Console (Prueba Cerrada)</span>
             <span>•</span>
             <span>Vigencia: 2026</span>
           </div>
@@ -85,9 +96,12 @@
             <p>
               El presente documento establece las condiciones de privacidad y especificaciones técnicas para la aplicación móvil <strong>CMR Ping Booster</strong> (Package ID: <code>com.cmr.pingbooster</code>), desarrollada bajo la autoría y titularidad exclusiva de <strong>Jonathan Gabriel Nieto</strong> para la marca y entidad <strong>Creative Maximum Reasoning (CMR)</strong>.
             </p>
+            <p>
+              La distribución oficial de la aplicación móvil se gestiona a través de <strong>Google Play Store</strong> (actualmente en fase de prueba cerrada y preparación de lanzamiento general).
+            </p>
           </section>
 
-          <section class="legal-section">
+          <section class="legal-section" id="privacidad-cero">
             <h2 class="legal-section-title"><span class="legal-section-num">02</span> Principio de Privacidad Cero-Recolección (Zero-Data Policy)</h2>
             <p>
               CMR Ping Booster fue concebida bajo el paradigma de privacidad por diseño. Ningún dato sensible, personal o de comportamiento es recopilado ni transferido a servidores externos:
@@ -108,16 +122,16 @@
             <div class="legal-highlight-box">
               <strong style="color: var(--text-pure); display: block; margin-bottom: 6px; font-family: var(--font-mono); font-size: 0.85rem;">FINALIDAD TÉCNICA EXCLUSIVA:</strong>
               <p style="font-size: 0.88rem; margin-bottom: 0;">
-                La API <code>VpnService</code> se utiliza únicamente para crear una interfaz de red en bucle local (Loopback VPN) en el dispositivo del usuario. Esta interfaz intercepta de forma transparente y local las solicitudes de resolución de nombres de dominio (DNS) para redirigirlas hacia servidores Anycast optimizados (Cloudflare 1.1.1.1, Google 8.8.8.8, Quad9 9.9.9.9), reduciendo la latencia y los microcortes en partidas de videojuegos.
+                La API <code>VpnService</code> se utiliza únicamente para crear una interfaz de red en bucle local (Loopback VPN en la dirección <code>10.254.1.2</code>) en el dispositivo del usuario. Esta interfaz intercepta de forma transparente y local las solicitudes de resolución de nombres de dominio (DNS) para redirigirlas hacia servidores Anycast optimizados (Cloudflare 1.1.1.1, Google 8.8.8.8, Quad9 9.9.9.9), reduciendo la latencia y los microcortes en partidas de videojuegos.
               </p>
             </div>
 
             <p style="margin-top: 12px; font-size: 0.85rem; color: var(--text-muted);">
-              <strong>Aclaración vinculante:</strong> CMR Ping Booster NO es un servicio de VPN remota, no enruta datos comerciales fuera del equipo, no oculta la IP pública del usuario con fines anónimos ni analiza paquetes de tráfico de otras aplicaciones instaladas.
+              <strong>Aclaración vinculante:</strong> CMR Ping Booster NO es un servicio de VPN remota comercial, no enruta datos fuera del equipo, no oculta la IP pública del usuario con fines anónimos ni analiza paquetes de tráfico de otras aplicaciones instaladas.
             </p>
           </section>
 
-          <section class="legal-section">
+          <section class="legal-section" id="permisos">
             <h2 class="legal-section-title"><span class="legal-section-num">04</span> Desglose de Permisos de Android y Justificación</h2>
             <table class="legal-table">
               <thead>
@@ -135,50 +149,58 @@
                 </tr>
                 <tr>
                   <td><code>ACCESS_NETWORK_STATE</code></td>
-                  <td>Detectar conectividad activa (Wi-Fi vs Datos Móviles) para perfiles de buffer.</td>
+                  <td>Detectar conectividad activa (Wi-Fi vs Datos Móviles) para calibración de buffers.</td>
                   <td>Lectura de Estado</td>
                 </tr>
                 <tr>
                   <td><code>POST_NOTIFICATIONS</code></td>
-                  <td>Mostrar la notificación de primer plano mientras el booster está activo.</td>
+                  <td>Mostrar la notificación de primer plano mientras el booster está activo con control de apagado rápido.</td>
                   <td>Android 13+</td>
                 </tr>
                 <tr>
                   <td><code>BIND_VPN_SERVICE</code></td>
-                  <td>Levantar el túnel DNS local de baja latencia a solicitud del usuario.</td>
-                  <td>Servicio en Bucle</td>
+                  <td>Levantar el túnel DNS local de baja latencia a solicitud explícita del usuario.</td>
+                  <td>Servicio en Bucle Local</td>
+                </tr>
+                <tr>
+                  <td><code>QUERY_ALL_PACKAGES</code></td>
+                  <td>Detectar los títulos de videojuegos instalados en el dispositivo para el radar de latencia local.</td>
+                  <td>Lectura Local</td>
                 </tr>
               </tbody>
             </table>
           </section>
 
-          <section class="legal-section">
-            <h2 class="legal-section-title"><span class="legal-section-num">05</span> Versión Complementaria para PC (Windows)</h2>
+          <section class="legal-section" id="suite-pc-referencia">
+            <h2 class="legal-section-title"><span class="legal-section-num">05</span> Separación con la Suite para Windows PC</h2>
             <p>
-              La suite dispone de una edición complementaria para entornos de escritorio Windows PC. Dicha edición es de libre distribución y gratuita, utilizando las APIs estándar de Windows Multimedia Timer y Winsock sin inyectar librerías en memoria ni comprometer la integridad de los sistemas anti-trampas (EAC, BattlEye, Vanguard, VAC).
+              La aplicación para Android es independiente de la versión para computadoras de escritorio. Para conocer las condiciones de seguridad, la arquitectura de temporizador y la política del actualizador in-app de Windows, consultá el documento específico:
+            </p>
+            <p style="margin-top: 8px;">
+              👉 <a href="./pc-privacy.html" style="color: var(--accent-cyan); text-decoration: none; font-weight: 600;">Ver Términos Técnicos y Política de Privacidad de PC →</a>
             </p>
           </section>
 
-          <section class="legal-section">
+          <section class="legal-section" id="marcas">
             <h2 class="legal-section-title"><span class="legal-section-num">06</span> Propiedad Intelectual y Derechos Reservados</h2>
             <p>
               Copyright © 2026 <strong>Jonathan Gabriel Nieto / CMR — Creative Maximum Reasoning</strong>. Todos los derechos reservados. Las marcas comerciales y nombres de videojuegos citados en el sitio web y documentación corresponden a sus respectivos propietarios y se mencionan exclusivamente con fines técnicos de compatibilidad.
             </p>
           </section>
 
-          <section class="legal-section">
+          <section class="legal-section" id="contacto">
             <h2 class="legal-section-title"><span class="legal-section-num">07</span> Canales de Contacto Directo</h2>
             <p>
-              Para soporte técnico, requerimientos de Google Play o consultas sobre esta especificación, disponés de los siguientes canales oficiales:
+              Para soporte técnico, requerimientos de Google Play Console o consultas sobre esta política:
             </p>
             
             <div class="contact-channels">
               <div class="contact-card">
-                <span class="contact-label">Soporte Oficial Aplicaciones</span>
+                <span class="contact-label">Soporte Oficial de Aplicaciones</span>
                 <a href="mailto:cmr.apps.oficial@gmail.com" class="contact-email">cmr.apps.oficial@gmail.com</a>
               </div>
               <div class="contact-card">
-                <span class="contact-label">Contacto del Desarrollador</span>
+                <span class="contact-label">Contacto con el Desarrollador</span>
                 <a href="mailto:chinooficial262@gmail.com" class="contact-email">chinooficial262@gmail.com</a>
               </div>
             </div>
@@ -201,15 +223,16 @@
         
         <div class="footer-links-row">
           <a href="./index.html#app-android" class="footer-link">App Android</a>
-          <a href="./index.html#pc-version" class="footer-link">Versión PC</a>
+          <a href="./index.html#suite-pc" class="footer-link">Suite PC</a>
+          <a href="./privacy.html" class="footer-link">Política Android</a>
+          <a href="./pc-privacy.html" class="footer-link">Política PC</a>
           <a href="./version.json" class="footer-link">version.json</a>
-          <a href="./privacy.html" class="footer-link">Política de Privacidad</a>
         </div>
       </div>
 
       <div class="footer-bottom-row">
         <span>Copyright © 2026 Jonathan Gabriel Nieto / CMR. Todos los derechos reservados.</span>
-        <span>Package ID: com.cmr.pingbooster</span>
+        <span>Package ID: com.cmr.pingbooster · Google Play Ready</span>
       </div>
     </div>
   </footer>

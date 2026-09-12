@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initLiveTelemetry();
   loadRemoteVersion();
+  initLanguagePreference();
 });
 
 function initLiveTelemetry() {
@@ -21,7 +22,7 @@ function initLiveTelemetry() {
   setInterval(() => {
     const pingFluctuation = Math.floor(Math.random() * 5) - 2;
     const currentPing = Math.max(14, 21 + pingFluctuation);
-    const currentJitter = (0.8 + Math.random() * 0.9).toFixed(1);
+    const currentJitter = (0.8 + Math.random() * 0.8).toFixed(1);
 
     pingEl.textContent = currentPing;
     jitterEl.textContent = currentJitter;
@@ -31,24 +32,49 @@ function initLiveTelemetry() {
       return `${g.name}: ${gPing}ms`;
     });
     radarStrip.textContent = stripParts.join('   •   ');
-  }, 2200);
+  }, 2400);
 }
 
 async function loadRemoteVersion() {
+  const isEnglish = window.location.pathname.includes('/en/');
+  const versionManifestPath = isEnglish ? '../version.json' : './version.json';
+
   try {
-    const res = await fetch('./version.json');
+    const res = await fetch(versionManifestPath);
     if (!res.ok) return;
     const data = await res.json();
 
     if (data.android) {
       const androidBadge = document.getElementById('android-version-badge');
-      if (androidBadge) androidBadge.textContent = `v${data.android.versionName} APK · Directo sin desinstalar`;
+      if (androidBadge) {
+        androidBadge.textContent = isEnglish
+          ? `v${data.android.versionName} · Package ${data.android.packageId || 'com.cmr.pingbooster'}`
+          : `v${data.android.versionName} · Paquete ${data.android.packageId || 'com.cmr.pingbooster'}`;
+      }
     }
 
     if (data.pc) {
       const pcBadge = document.getElementById('pc-version-badge');
-      if (pcBadge) pcBadge.textContent = `v${data.pc.version} EXE · Portable de 64-bit`;
+      if (pcBadge) {
+        pcBadge.textContent = isEnglish
+          ? `v${data.pc.version} EXE · Standalone Portable Binary`
+          : `v${data.pc.version} EXE · Binario Autónomo Portable`;
+      }
     }
   } catch (err) {
+    // Modo de fallo silencioso para entornos sin conexión o previsualización local
   }
+}
+
+function initLanguagePreference() {
+  const langOptions = document.querySelectorAll('.lang-option');
+  langOptions.forEach(opt => {
+    opt.addEventListener('click', () => {
+      const targetLang = opt.textContent.trim().toUpperCase();
+      try {
+        localStorage.setItem('cmr_preferred_lang', targetLang);
+      } catch (e) {
+      }
+    });
+  });
 }
