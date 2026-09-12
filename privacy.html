@@ -10,14 +10,14 @@
   <meta name="creator" content="Jonathan Gabriel Nieto">
   <meta name="publisher" content="Creative Maximum Reasoning (CMR)">
   <meta name="copyright" content="Copyright © 2026 Jonathan Gabriel Nieto / CMR — Creative Maximum Reasoning. Todos los derechos reservados.">
-  <meta name="theme-color" content="#090a0f">
+  <meta name="theme-color" content="#090a0d">
   
   <link rel="icon" type="image/x-icon" href="./assets/favicon.ico">
   <link rel="apple-touch-icon" href="./assets/logo.png">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="./styles.css">
 </head>
@@ -35,20 +35,20 @@
       <nav class="nav-links">
         <a href="./index.html" class="nav-link">Inicio</a>
         <a href="./index.html#app-android" class="nav-link">App Android</a>
-        <a href="./index.html#pc-version" class="nav-link">Versión PC Gratis</a>
-        <a href="./index.html#caracteristicas" class="nav-link">Tecnología</a>
+        <a href="./index.html#arquitectura" class="nav-link">Especificación</a>
+        <a href="./index.html#pc-version" class="nav-link">Versión PC</a>
       </nav>
     </div>
   </header>
 
   <main class="legal-main">
-    <div class="container" style="max-width: 920px;">
+    <div class="container" style="max-width: 940px;">
       
       <article class="legal-document">
         
         <div class="legal-header">
-          <span class="badge-tag" style="background: rgba(234, 179, 8, 0.1); color: var(--accent-cmr-gold); border: 1px solid rgba(234, 179, 8, 0.3);">ESPECIFICACIÓN DE PRIVACIDAD & SEGURIDAD</span>
-          <h1 style="font-size: 2.1rem; font-weight: 700; color: var(--text-primary); margin-top: 14px; margin-bottom: 8px;">Política de Privacidad Oficial</h1>
+          <span class="head-meta-code">ESPECIFICACIÓN DE PRIVACIDAD & SEGURIDAD</span>
+          <h1>Política de Privacidad Oficial</h1>
           
           <div class="legal-meta-strip">
             <span>Paquete: <code>com.cmr.pingbooster</code></span>
@@ -61,59 +61,59 @@
 
         <div class="legal-summary-grid">
           <div class="legal-summary-item">
-            <span class="legal-summary-val" style="color: var(--accent-emerald);">0 LOGS</span>
+            <span class="legal-summary-val" style="color: var(--accent-green);">0 LOGS</span>
             <span class="legal-summary-lbl">Registro de Tráfico</span>
           </div>
           <div class="legal-summary-item">
-            <span class="legal-summary-val" style="color: var(--accent-emerald);">100% LOCAL</span>
+            <span class="legal-summary-val" style="color: var(--accent-green);">100% LOCAL</span>
             <span class="legal-summary-lbl">Procesamiento en Dispositivo</span>
           </div>
           <div class="legal-summary-item">
-            <span class="legal-summary-val" style="color: var(--accent-cmr-gold);">LOOPBACK</span>
+            <span class="legal-summary-val" style="color: var(--accent-gold);">LOOPBACK</span>
             <span class="legal-summary-lbl">Arquitectura VpnService</span>
           </div>
           <div class="legal-summary-item">
-            <span class="legal-summary-val" style="color: var(--text-primary);">0 RASTREADORES</span>
+            <span class="legal-summary-val" style="color: var(--text-pure);">0 RASTREADORES</span>
             <span class="legal-summary-lbl">SDKs Publicitarios</span>
           </div>
         </div>
 
         <div class="legal-content">
 
-          <section class="legal-section">
+          <section class="legal-section" id="titularidad">
             <h2 class="legal-section-title"><span class="legal-section-num">01</span> Titularidad y Alcance Legal</h2>
             <p>
-              El presente documento establece las condiciones de privacidad y tratamiento técnico para la aplicación móvil <strong>CMR Ping Booster</strong> (Package ID: <code>com.cmr.pingbooster</code>), desarrollada bajo la autoría y titularidad exclusiva de <strong>Jonathan Gabriel Nieto</strong> para la marca y entidad <strong>Creative Maximum Reasoning (CMR)</strong>.
+              El presente documento establece las condiciones de privacidad y especificaciones técnicas para la aplicación móvil <strong>CMR Ping Booster</strong> (Package ID: <code>com.cmr.pingbooster</code>), desarrollada bajo la autoría y titularidad exclusiva de <strong>Jonathan Gabriel Nieto</strong> para la marca y entidad <strong>Creative Maximum Reasoning (CMR)</strong>.
             </p>
           </section>
 
           <section class="legal-section">
             <h2 class="legal-section-title"><span class="legal-section-num">02</span> Principio de Privacidad Cero-Recolección (Zero-Data Policy)</h2>
             <p>
-              CMR Ping Booster fue concebida bajo el paradigma de privacidad por diseño. Ningún dato sensible, personal o de comportamiento es recopilado ni transferido:
+              CMR Ping Booster fue concebida bajo el paradigma de privacidad por diseño. Ningún dato sensible, personal o de comportamiento es recopilado ni transferido a servidores externos:
             </p>
-            <ul style="padding-left: 20px; margin-top: 10px; display: flex; flex-direction: column; gap: 6px;">
-              <li><strong>Datos Personales:</strong> No se solicitan nombres, cuentas, correos, agendas de contactos, localización GPS ni identificadores únicos de hardware (IMEI/MAC).</li>
+            <ul style="padding-left: 20px; margin-top: 10px; display: flex; flex-direction: column; gap: 8px;">
+              <li><strong>Datos Personales:</strong> No se solicitan nombres, cuentas, correos electrónicos, agendas de contactos, localización GPS ni identificadores únicos de hardware (IMEI/MAC).</li>
               <li><strong>Historial de Navegación:</strong> No se almacenan ni transmiten consultas DNS, dominios visitados, paquetes de red ni sesiones web.</li>
-              <li><strong>Infraestructura:</strong> La aplicación no opera servidores proxy ni almacena registros (logs) de conexiones en la nube.</li>
+              <li><strong>Infraestructura:</strong> La aplicación no opera servidores proxy comerciales ni almacena registros (logs) de conexiones en la nube.</li>
             </ul>
           </section>
 
-          <section class="legal-section">
+          <section class="legal-section" id="vpnservice">
             <h2 class="legal-section-title"><span class="legal-section-num">03</span> Declaración de Uso de VpnService (Google Play Compliance)</h2>
             <p>
-              En conformidad estricta con la política de servicios VPN de Google Play para el permiso <code>android.permission.BIND_VPN_SERVICE</code>:
+              En conformidad estricta con la política de servicios VPN de Google Play Store para el permiso <code>android.permission.BIND_VPN_SERVICE</code>:
             </p>
             
             <div class="legal-highlight-box">
-              <strong style="color: var(--text-primary); display: block; margin-bottom: 6px;">Finalidad Técnica Exclusiva:</strong>
-              <p style="font-size: 0.90rem; margin-bottom: 0;">
+              <strong style="color: var(--text-pure); display: block; margin-bottom: 6px; font-family: var(--font-mono); font-size: 0.85rem;">FINALIDAD TÉCNICA EXCLUSIVA:</strong>
+              <p style="font-size: 0.88rem; margin-bottom: 0;">
                 La API <code>VpnService</code> se utiliza únicamente para crear una interfaz de red en bucle local (Loopback VPN) en el dispositivo del usuario. Esta interfaz intercepta de forma transparente y local las solicitudes de resolución de nombres de dominio (DNS) para redirigirlas hacia servidores Anycast optimizados (Cloudflare 1.1.1.1, Google 8.8.8.8, Quad9 9.9.9.9), reduciendo la latencia y los microcortes en partidas de videojuegos.
               </p>
             </div>
 
-            <p style="margin-top: 12px; font-size: 0.90rem; color: var(--text-muted);">
-              <strong>Aclaración:</strong> CMR Ping Booster NO es un servicio de VPN remota, no enruta datos comerciales, no oculta la IP pública del usuario ni analiza paquetes de tráfico de otras aplicaciones.
+            <p style="margin-top: 12px; font-size: 0.85rem; color: var(--text-muted);">
+              <strong>Aclaración vinculante:</strong> CMR Ping Booster NO es un servicio de VPN remota, no enruta datos comerciales fuera del equipo, no oculta la IP pública del usuario con fines anónimos ni analiza paquetes de tráfico de otras aplicaciones instaladas.
             </p>
           </section>
 
@@ -169,7 +169,7 @@
           <section class="legal-section">
             <h2 class="legal-section-title"><span class="legal-section-num">07</span> Canales de Contacto Directo</h2>
             <p>
-              Para soporte técnico, requerimientos de Google Play o consultas sobre esta política, disponés de los siguientes canales oficiales:
+              Para soporte técnico, requerimientos de Google Play o consultas sobre esta especificación, disponés de los siguientes canales oficiales:
             </p>
             
             <div class="contact-channels">
@@ -192,18 +192,24 @@
   </main>
 
   <footer class="footer">
-    <div class="container footer-container">
-      <div class="footer-logo-wrapper">
-        <img src="./assets/cmr_brand.png?v=2026" alt="Logo Oficial CMR" class="footer-logo-img">
+    <div class="container">
+      <div class="footer-top-row">
+        <div class="footer-identity">
+          <img src="./assets/cmr_brand.png?v=2026" alt="Logo Oficial CMR" class="footer-logo-img">
+          <span class="footer-brand-name">Creative Maximum Reasoning</span>
+        </div>
+        
+        <div class="footer-links-row">
+          <a href="./index.html#app-android" class="footer-link">App Android</a>
+          <a href="./index.html#pc-version" class="footer-link">Versión PC</a>
+          <a href="./version.json" class="footer-link">version.json</a>
+          <a href="./privacy.html" class="footer-link">Política de Privacidad</a>
+        </div>
       </div>
-      <p class="footer-brand-title">Creative Maximum Reasoning</p>
-      <p class="footer-copyright">Copyright © 2026 Jonathan Gabriel Nieto / CMR — Creative Maximum Reasoning.</p>
-      
-      <div class="footer-links">
-        <a href="./index.html#app-android" class="footer-link">App Android</a>
-        <a href="./index.html#pc-version" class="footer-link">Versión PC Gratis</a>
-        <a href="./version.json" class="footer-link">Buzón de Versiones</a>
-        <a href="./privacy.html" class="footer-link">Política de Privacidad</a>
+
+      <div class="footer-bottom-row">
+        <span>Copyright © 2026 Jonathan Gabriel Nieto / CMR. Todos los derechos reservados.</span>
+        <span>Package ID: com.cmr.pingbooster</span>
       </div>
     </div>
   </footer>
