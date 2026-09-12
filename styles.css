@@ -1,29 +1,28 @@
 /* ==========================================================================
    CMR PING BOOSTER — SISTEMA DE DISEÑO MATE INDUSTRIAL & EDITORIAL TÉCNICO
-   Diseñado con criterio de ingeniería real: sin tarjetas de IA repetitivas,
-   sin gradientes neón genéricos, con fondo sólido texturizado y alta legibilidad.
+   Arquitectura visual de instrumentación técnica, acabados minerales y alta legibilidad.
    ========================================================================== */
 
 :root {
-  /* Fondo Sólido Grafito & Carbón Mate */
-  --bg-canvas: #090a0d;
-  --bg-panel: #101217;
-  --bg-panel-elevated: #15181f;
-  --bg-panel-subtle: #0d0f14;
-  --bg-input: #08090c;
+  /* Fondo Sólido Grafito & Carbón con Matiz Bosque Mate */
+  --bg-canvas: #090c0a;
+  --bg-panel: #101613;
+  --bg-panel-elevated: #141c18;
+  --bg-panel-subtle: #0c120f;
+  --bg-input: #080b09;
 
-  /* Bordes de Corte Técnico y Separadores Milimétricos */
-  --border-dim: #1a1e27;
-  --border-subtle: #242936;
-  --border-mid: #323a4b;
-  --border-strong: #454f64;
+  /* Bordes de Corte Técnico y Separadores con Pátina Mineral */
+  --border-dim: #18231c;
+  --border-subtle: #223027;
+  --border-mid: #2f4236;
+  --border-strong: #405849;
 
-  /* Acentos Mate Calibrados (Bronce Industrial, Verde Óxido, Gris Acero) */
+  /* Acentos Mate Calibrados (Bronce Industrial, Verde Óxido Artesanal, Gris Acero) */
   --accent-gold: #cf9b3c;
   --accent-gold-subtle: rgba(207, 155, 60, 0.08);
   --accent-gold-border: rgba(207, 155, 60, 0.25);
   --accent-green: #5b9279;
-  --accent-green-subtle: rgba(91, 146, 121, 0.10);
+  --accent-green-subtle: rgba(91, 146, 121, 0.12);
   --accent-steel: #8b93a3;
   --accent-steel-subtle: rgba(139, 147, 163, 0.10);
 
@@ -31,7 +30,7 @@
   --text-pure: #f8fafc;
   --text-primary: #e2e8f0;
   --text-secondary: #94a3b8;
-  --text-muted: #5f6b7e;
+  --text-muted: #64748b;
   --text-code: #cbd5e1;
 
   --font-main: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -42,8 +41,8 @@
   --radius-md: 6px;
   --radius-lg: 8px;
 
-  --ease-fast: 0.15s cubic-bezier(0.2, 0, 0, 1);
-  --ease-smooth: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-smooth: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 *, *::before, *::after {
@@ -69,9 +68,9 @@ body {
   min-height: 100vh;
 }
 
-/* ================= TEXTURA DE FONDO FÍSICO MATE =================
-   Grano sutil e imperfección física orgánica (ruido mineral y halo de bronce tenue)
-   en reemplazo de retículas y patrones matemáticos regulares. */
+/* ================= TEXTURA DE FONDO VERDE PIZARRA MATE (ARTESANAL) =================
+   Imagen de textura física de grano mineral y fibra vegetal verdosa mate,
+   combinada con un halo sutil de bronce cálido superior. */
 body::before {
   content: "";
   position: fixed;
@@ -80,10 +79,13 @@ body::before {
   width: 100vw;
   height: 100vh;
   background-image: 
-    radial-gradient(circle at 50% 0%, rgba(207, 155, 60, 0.035) 0%, transparent 65%),
-    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E");
-  background-size: 100% 100%, 180px 180px;
-  background-position: center top, 0 0;
+    radial-gradient(circle at 50% 0%, rgba(207, 155, 60, 0.045) 0%, transparent 65%),
+    radial-gradient(circle at 50% 45%, rgba(91, 146, 121, 0.06) 0%, transparent 80%),
+    url("./assets/green_slate_texture.jpg");
+  background-size: 100% 100%, 100% 100%, 600px 600px;
+  background-position: center top, center center, 0 0;
+  background-repeat: no-repeat, no-repeat, repeat;
+  opacity: 0.38;
   pointer-events: none;
   z-index: -1;
 }
@@ -279,15 +281,15 @@ body::before {
 .badge-live {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 9px;
   align-self: flex-start;
-  background: var(--bg-panel);
-  border: 1px solid var(--border-subtle);
-  padding: 4px 10px;
+  background: rgba(16, 26, 20, 0.65);
+  border: 1px solid rgba(91, 146, 121, 0.35);
+  padding: 5px 12px;
   border-radius: var(--radius-xs);
   font-size: 0.72rem;
   font-weight: 600;
-  color: var(--text-secondary);
+  color: #cbd5e1;
   text-transform: uppercase;
   letter-spacing: 0.06em;
   font-family: var(--font-mono);
@@ -295,20 +297,13 @@ body::before {
 }
 
 .status-indicator {
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   background: var(--accent-green);
+  border: 1px solid rgba(167, 243, 208, 0.35);
   border-radius: 50%;
-  animation: status-pulse 2.5s ease-in-out infinite;
-}
-
-@keyframes status-pulse {
-  0%, 100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.45;
-  }
+  display: inline-block;
+  flex-shrink: 0;
 }
 
 .hero-title {
@@ -333,7 +328,7 @@ body::before {
   max-width: 580px;
 }
 
-/* ================= BOTONES MECANIZADOS SÓLIDOS ================= */
+/* ================= BOTONES MECANIZADOS ARTESANALES (VERDE MATE HOVER) ================= */
 .cta-group {
   display: flex;
   gap: 14px;
@@ -351,14 +346,21 @@ body::before {
   border-radius: var(--radius-sm);
   text-decoration: none;
   color: var(--text-pure);
-  transition: all var(--ease-fast);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   text-align: left;
 }
 
 .btn-download:hover {
-  background: var(--border-subtle);
-  border-color: var(--border-mid);
-  transform: translateY(-1px);
+  background: #14221a;
+  border-color: rgba(91, 146, 121, 0.55);
+  box-shadow: 0 6px 20px rgba(16, 32, 23, 0.40);
+  transform: translateY(-2px);
+}
+
+.btn-download:hover .btn-icon-wrapper {
+  border-color: rgba(91, 146, 121, 0.50);
+  background: #0c1510;
+  color: #a7f3d0;
 }
 
 .btn-download:active {
@@ -376,6 +378,7 @@ body::before {
   justify-content: center;
   color: var(--accent-gold);
   flex-shrink: 0;
+  transition: all 0.25s ease;
 }
 
 .btn-content {
@@ -397,7 +400,7 @@ body::before {
   margin-top: 2px;
 }
 
-/* Botón secundario sobrio */
+/* Botón secundario con pátina verde mate en hover */
 .btn-secondary-action {
   display: inline-flex;
   align-items: center;
@@ -410,22 +413,28 @@ body::before {
   font-size: 0.85rem;
   font-weight: 500;
   text-decoration: none;
-  transition: all var(--ease-fast);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .btn-secondary-action:hover {
   color: var(--text-pure);
-  border-color: var(--border-mid);
-  background: var(--bg-panel);
+  border-color: rgba(91, 146, 121, 0.45);
+  background: rgba(91, 146, 121, 0.12);
+  transform: translateY(-1px);
 }
 
-/* ================= RACK DE INSTRUMENTACIÓN & TELEMETRÍA =================
-   Diseño de ingeniería sobrio (tipo consola de rack de red) */
+/* ================= RACK DE INSTRUMENTACIÓN & TELEMETRÍA ================= */
 .telemetry-rack {
   background: var(--bg-panel);
   border: 1px solid var(--border-subtle);
   border-radius: var(--radius-sm);
   overflow: hidden;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.telemetry-rack:hover {
+  border-color: rgba(91, 146, 121, 0.40);
+  box-shadow: 0 8px 24px rgba(16, 30, 22, 0.35);
 }
 
 .rack-header {
@@ -540,8 +549,7 @@ body::before {
 }
 
 /* ================= ESPECIFICACIÓN DE INGENIERÍA (CARDLESS SPEC SHEET) =================
-   En lugar de tarjetas de IA repetidas, usamos una división de especificación técnica
-   limpia con numeración de arquitectura, metadatos y rigor analítico. */
+   Estructura modular dividida en formato spec sheet con numeración de arquitectura y rigor técnico. */
 .spec-section {
   padding: 70px 0 65px;
   border-bottom: 1px solid var(--border-dim);
@@ -596,7 +604,8 @@ body::before {
   padding: 22px 12px;
   border-bottom: 1px solid var(--border-dim);
   align-items: baseline;
-  transition: background-color var(--ease-fast);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  border-radius: var(--radius-xs);
 }
 
 .spec-row:first-child {
@@ -604,7 +613,9 @@ body::before {
 }
 
 .spec-row:hover {
-  background: rgba(255, 255, 255, 0.015);
+  background: rgba(18, 30, 23, 0.45);
+  border-color: rgba(91, 146, 121, 0.30);
+  padding-left: 16px;
 }
 
 .spec-code {
@@ -698,6 +709,13 @@ body::before {
   border: 1px solid var(--border-dim);
   border-radius: var(--radius-xs);
   padding: 20px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.arch-compare-box:hover {
+  background: #111b15;
+  border-color: rgba(91, 146, 121, 0.40);
+  box-shadow: 0 6px 20px rgba(16, 32, 23, 0.30);
 }
 
 .arch-compare-title {
@@ -818,6 +836,20 @@ body::before {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.audit-cell:hover {
+  background: #132219;
+  box-shadow: inset 0 0 0 1px rgba(91, 146, 121, 0.45);
+}
+
+.audit-cell:hover h3 {
+  color: var(--text-pure);
+}
+
+.audit-cell:hover .audit-cell-link {
+  color: #a7f3d0;
 }
 
 .audit-cell-tag {

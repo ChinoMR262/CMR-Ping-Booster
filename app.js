@@ -48,8 +48,8 @@ async function loadRemoteVersion() {
       const androidBadge = document.getElementById('android-version-badge');
       if (androidBadge) {
         androidBadge.textContent = isEnglish
-          ? `v${data.android.versionName} · Package ${data.android.packageId || 'com.cmr.pingbooster'}`
-          : `v${data.android.versionName} · Paquete ${data.android.packageId || 'com.cmr.pingbooster'}`;
+          ? `v${data.android.versionName} · Android 7.0 or higher`
+          : `v${data.android.versionName} · Android 7.0 o superior`;
       }
     }
 
