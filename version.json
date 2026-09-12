@@ -1,9 +1,9 @@
 {
   "android": {
-    "versionCode": 2,
+    "versionCode": 1,
     "versionName": "1.0.0",
     "packageId": "com.cmr.pingbooster",
-    "distribution": "Google Play Store (Prueba Cerrada)",
+    "distribution": "Primer paquete preparado para Prueba Cerrada de Google Play (aún no subido)",
     "minAndroidVersion": "Android 7.0 (API 24)",
     "targetAndroidVersion": "Android 15 (API 35)",
     "releaseDate": "2026-09-12",
@@ -19,6 +19,7 @@
     "version": "1.0.0",
     "exeName": "CMR_Ping_Booster_PC.exe",
     "downloadUrl": "https://chinomr262.github.io/CMR-Ping-Booster/CMR_Ping_Booster_PC.exe",
+    "sha256": "CC05884A4F44DEE87BA99DC4C362A916650398EDA2335DC9E4084DEC3671DE2F",
     "releaseDate": "2026-09-12",
     "minWindowsVersion": "Windows 10 / Windows 11 (x64)",
     "changelog": [
