@@ -84,8 +84,8 @@ body::before {
   background-size: cover, cover;
   background-position: center top, center top;
   background-repeat: no-repeat, no-repeat;
-  filter: blur(28px);
-  -webkit-filter: blur(28px);
+  filter: none;
+  -webkit-filter: none;
   transform: scale(1.06);
   opacity: 0.75;
   pointer-events: none;
@@ -1212,5 +1212,395 @@ body::before {
 
   .legal-header, .legal-content {
     padding: 24px 20px;
+  }
+}
+
+/* ========================================================================
+   CMR FIELD PANEL — RECALIBRACIÓN VISUAL
+   Menos interfaz ornamental; más señalética, material y lectura operativa.
+   ======================================================================== */
+:root {
+  --bg-canvas: #10151c;
+  --bg-panel: #161c24;
+  --bg-panel-elevated: #1d2530;
+  --bg-panel-subtle: #121922;
+  --border-dim: #25303d;
+  --border-subtle: #334154;
+  --border-mid: #596151;
+  --border-strong: #77806d;
+  --accent-gold: #b9924e;
+  --accent-gold-subtle: rgba(185, 146, 78, 0.08);
+  --accent-gold-border: rgba(185, 146, 78, 0.38);
+  --accent-green: #28b779;
+  --accent-green-subtle: rgba(40, 183, 121, 0.12);
+  --accent-blue: #4c8dff;
+  --text-pure: #f1f2eb;
+  --text-primary: #d8dbd1;
+  --text-secondary: #afb5a9;
+  --text-muted: #7f887a;
+  --radius-xs: 0;
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+}
+
+body::before {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  transform: none;
+  filter: none;
+  opacity: 0.18;
+  background-image: linear-gradient(90deg, rgba(16, 21, 28, 0.84), rgba(16, 21, 28, 0.58)), url("./assets/radar_bg_hd.jpg");
+  background-size: cover;
+  background-position: 72% center;
+}
+
+.navbar {
+  background: rgba(16, 21, 28, 0.95);
+  backdrop-filter: blur(4px);
+  padding: 14px 0;
+}
+
+.brand-logo {
+  border: 0;
+  border-radius: 0;
+}
+
+.hero {
+  min-height: min(760px, calc(100svh - 62px));
+  display: grid;
+  align-items: center;
+  padding: 72px 0 80px;
+  border-bottom: 1px solid var(--border-dim);
+}
+
+.hero-editorial {
+  grid-template-columns: minmax(0, 760px);
+  gap: 0;
+  align-items: start;
+}
+
+.hero-main-column {
+  max-width: 650px;
+}
+
+.badge-live,
+.badge-pill-status,
+.head-meta-code,
+.rack-state-pill {
+  border-radius: 0;
+  letter-spacing: 0.11em;
+}
+
+.hero-title {
+  max-width: 720px;
+  font-size: clamp(3.25rem, 7vw, 6.6rem);
+  line-height: 0.94;
+  letter-spacing: -0.07em;
+  font-weight: 600;
+}
+
+.hero-title-sub {
+  color: var(--accent-blue);
+  font-weight: 500;
+}
+
+.hero-subtitle {
+  max-width: 570px;
+  font-size: 1.03rem;
+  color: var(--text-secondary);
+}
+
+.btn-download,
+.btn-secondary-action,
+.btn-nav {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.btn-download:hover,
+.btn-secondary-action:hover,
+.btn-nav:hover {
+  box-shadow: none;
+  transform: translateY(-2px);
+}
+
+.telemetry-rack,
+.arch-compare-box,
+.json-console,
+.audit-cell,
+.contact-card {
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.telemetry-rack {
+  background: transparent;
+  border: 0;
+  border-left: 2px solid var(--accent-gold);
+  padding: 0 0 0 22px;
+}
+
+.rack-header {
+  border-bottom-color: var(--border-mid);
+}
+
+.rack-metrics-grid {
+  gap: 0;
+}
+
+.rack-metric-cell {
+  padding: 19px 0;
+}
+
+.rack-metric-value {
+  font-size: 1.6rem;
+  letter-spacing: -0.04em;
+}
+
+.rack-terminal {
+  background: transparent;
+  border-top: 1px solid var(--border-dim);
+  padding: 15px 0 0;
+}
+
+.spec-section,
+.desktop-suite-section,
+.updater-section,
+.legal-audit-section {
+  padding: clamp(72px, 10vw, 132px) 0;
+  border-bottom: 1px solid var(--border-dim);
+}
+
+.section-editorial-head {
+  padding-bottom: 28px;
+  border-bottom: 2px solid var(--text-pure);
+}
+
+.spec-row {
+  border-radius: 0;
+  border-left: 0;
+  border-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.spec-row:hover {
+  background: transparent;
+  box-shadow: none;
+}
+
+.desktop-console-layout,
+.updater-layout {
+  align-items: start;
+}
+
+.arch-compare-box,
+.json-console {
+  background: rgba(18, 20, 16, 0.78);
+  border: 1px solid var(--border-subtle);
+}
+
+.audit-grid {
+  gap: 0;
+  border-top: 1px solid var(--border-dim);
+}
+
+.audit-cell {
+  min-height: 260px;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--border-dim);
+  padding: 32px 0;
+}
+
+.audit-cell:hover {
+  background: transparent;
+  box-shadow: none;
+}
+
+.footer {
+  background: #0e141b;
+}
+
+.legal-content p,
+.legal-content li,
+.legal-content td,
+.legal-content th,
+.legal-highlight-box p {
+  font-size: clamp(1rem, 0.96rem + 0.18vw, 1.08rem) !important;
+  line-height: 1.72;
+}
+
+@media (max-width: 680px) {
+  .container {
+    width: min(100% - 36px, 680px);
+  }
+
+  .navbar {
+    padding: 10px 0;
+  }
+
+  .brand-text span,
+  .nav-links {
+    display: none;
+  }
+
+  .brand-text h1 {
+    font-size: 0.92rem;
+    letter-spacing: -0.02em;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 62px 0 58px;
+  }
+
+  .hero-title {
+    font-size: clamp(2.8rem, 14vw, 4.2rem);
+  }
+
+  .telemetry-rack {
+    padding-left: 16px;
+  }
+
+  .hero-editorial {
+    gap: 42px;
+  }
+
+  .rack-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-editorial-head {
+    padding-bottom: 18px;
+  }
+
+  /* Documento legal: composición de una sola columna, sin desbordes. */
+  .legal-main {
+    padding: 24px 0 52px;
+  }
+
+  .legal-main .container {
+    width: 100%;
+    padding-inline: 16px;
+  }
+
+  .legal-document {
+    border-inline: 0;
+  }
+
+  .legal-header,
+  .legal-content {
+    padding: 22px 18px;
+  }
+
+  .legal-header > div:first-child {
+    align-items: flex-start !important;
+    flex-direction: column;
+  }
+
+  .legal-header h1 {
+    font-size: 1.75rem;
+    line-height: 1.15;
+  }
+
+  .legal-meta-strip {
+    display: grid;
+    gap: 7px;
+    font-size: 0.78rem;
+    line-height: 1.5;
+  }
+
+  .legal-meta-strip > span:nth-child(even) {
+    display: none;
+  }
+
+  .legal-summary-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .legal-summary-item {
+    min-width: 0;
+    padding: 16px;
+  }
+
+  .legal-summary-val {
+    font-size: 0.95rem;
+  }
+
+  .legal-summary-lbl {
+    font-size: 0.72rem;
+    overflow-wrap: anywhere;
+  }
+
+  .legal-content {
+    gap: 30px;
+    font-size: 1rem;
+    line-height: 1.72;
+  }
+
+  .legal-section {
+    padding-left: 14px;
+    scroll-margin-top: 82px;
+  }
+
+  .legal-section-title {
+    align-items: flex-start;
+    font-size: 1.08rem;
+    line-height: 1.4;
+  }
+
+  .legal-highlight-box {
+    padding: 16px;
+  }
+
+  .legal-highlight-box p,
+  .legal-section p[style] {
+    font-size: 0.96rem !important;
+  }
+
+  .legal-table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .legal-table th,
+  .legal-table td {
+    min-width: 150px;
+    padding: 11px 12px;
+  }
+
+  .contact-channels {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-email {
+    overflow-wrap: anywhere;
+  }
+
+  .footer-links-row,
+  .footer-bottom-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 390px) {
+  .legal-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .brand-text h1 {
+    font-size: 0.82rem;
+  }
+
+  .lang-option {
+    padding-inline: 7px;
   }
 }

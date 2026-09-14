@@ -3,16 +3,16 @@
     "versionCode": 1,
     "versionName": "1.0.0",
     "packageId": "com.cmr.pingbooster",
-    "distribution": "Primer paquete preparado para Prueba Cerrada de Google Play (aún no subido)",
+    "distribution": "Google Play",
     "minAndroidVersion": "Android 7.0 (API 24)",
-    "targetAndroidVersion": "Android 15 (API 35)",
-    "releaseDate": "2026-09-12",
+    "targetAndroidVersion": "Android 16 (API 36)",
+    "releaseDate": "2026-09-13",
     "features": [
-      "Enrutamiento Anycast DNS en bucle local de ultra-baja latencia",
-      "Mitigación de fluctuaciones y jitter en Wi-Fi para títulos competitivos",
-      "Procesamiento 100% en el dispositivo bajo política de privacidad Zero-Data",
-      "Restauración atómica de la conectividad al desactivar el servicio",
-      "Cumplimiento riguroso de normativas VpnService de Google Play Store"
+      "Interfaz VPN local limitada a consultas DNS",
+      "Medición comparativa de resolvers y nodos regionales",
+      "CMR no almacena consultas; el DNS se resuelve con el proveedor elegido",
+      "Cierre de la interfaz VPN y liberación de bloqueos Wi-Fi al detener la sesión",
+      "Consentimiento explícito antes de solicitar el permiso VpnService"
     ]
   },
   "pc": {
@@ -24,10 +24,10 @@
     "minWindowsVersion": "Windows 10 / Windows 11 (x64)",
     "changelog": [
       "Actualización directa integrada desde el mismo programa: presionás actualizar y busca/aplica la nueva versión automáticamente",
-      "Resolución de temporizador Multimedia Timer a 1.0 ms exactos para estabilización de frame pacing",
+      "Solicitud de resolución del temporizador multimedia mientras el programa está activo",
       "Purga selectiva de memoria de trabajo (Working Sets) de RAM sin interrupciones",
-      "Optimización de socket Winsock Anycast para servidores de juegos en Cono Sur y LATAM",
-      "Compatibilidad total Zero Anti-Cheat: sin inyección de DLLs ni acceso a memoria de juegos (Vanguard, EAC, BattlEye, VAC, Ricochet)"
+      "Configuración local de sockets y medición de destinos regionales",
+      "No inyecta DLL ni accede a la memoria de juegos; la compatibilidad depende de las reglas de cada producto"
     ]
   }
 }
