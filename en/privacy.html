@@ -52,14 +52,12 @@
   <main class="legal-main">
     <div class="container" style="max-width: 940px;">
 
-      <article class="legal-document">
+      <article class="legal-document privacy-document">
 
-        <div class="legal-header">
-          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-            <span class="badge-pill-status android">ANDROID GOOGLE PLAY</span>
-            <span class="head-meta-code">PRIVACY &amp; TECHNICAL SPECIFICATION</span>
-          </div>
-          <h1>Official Privacy Policy</h1>
+        <div class="legal-header privacy-masthead">
+          <p class="privacy-overline">CMR Ping Booster · Android</p>
+          <h1>Your connection is not our product.</h1>
+          <p class="privacy-lede">This policy explains plainly what the app processes to resolve DNS, and what never reaches CMR.</p>
 
           <div class="legal-meta-strip">
             <span>Package ID: <code>com.cmr.pingbooster</code></span>
@@ -67,24 +65,14 @@
           </div>
         </div>
 
-        <div class="legal-summary-grid">
-          <div class="legal-summary-item">
-            <span class="legal-summary-val" style="color: var(--accent-green);">0 LOGS</span>
-            <span class="legal-summary-lbl">Traffic Records</span>
-          </div>
-          <div class="legal-summary-item">
-            <span class="legal-summary-val" style="color: var(--accent-green);">NO ACCOUNT</span>
-            <span class="legal-summary-lbl">CMR does not receive DNS queries</span>
-          </div>
-          <div class="legal-summary-item">
-            <span class="legal-summary-val" style="color: var(--accent-gold);">LOOPBACK</span>
-            <span class="legal-summary-lbl">VpnService Architecture</span>
-          </div>
-          <div class="legal-summary-item">
-            <span class="legal-summary-val" style="color: var(--text-pure);">NO AD SDKS</span>
-            <span class="legal-summary-lbl">No in-app advertising</span>
-          </div>
-        </div>
+        <aside class="privacy-trustline" aria-label="CMR privacy commitment">
+          <p>CMR does not sell, share, or turn your traffic into advertising.</p>
+          <ul>
+            <li>No account</li>
+            <li>No ads</li>
+            <li>No logs at CMR</li>
+          </ul>
+        </aside>
 
         <div class="legal-content">
 
@@ -222,6 +210,9 @@
             </p>
             <p style="margin-top: 10px;">
               Measurements and adjustments depend on the device, Android version, Internet provider, DNS resolver, location, and game server. No specific reduction in ping, jitter, packet loss, or increase in FPS is guaranteed. Advanced functions requiring Shizuku, root, or special access are optional, identified before use, and remain under the user's control.
+            </p>
+            <p style="margin-top: 10px;">
+              The app does not increase Wi-Fi signal, disable Android-controlled network scanning, or stop Digital Wellbeing, system services, or third-party apps. Its MTU setting applies only to the local DNS interface, never to the physical Wi-Fi or mobile interface.
             </p>
             <p style="margin-top: 10px;">
               Purchases, cancellations, and refund requests are administered through Google Play and applicable consumer law. Nothing in these terms limits non-waivable consumer rights.
