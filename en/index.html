@@ -3,30 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CMR Ping Booster · Gaming Network Stability Suite (Android & PC)</title>
-  
-  <meta name="description" content="Official website for CMR Ping Booster. Network latency optimization, Anycast DNS routing, and jitter mitigation for mobile gaming and Windows PC. Google Play Store compliant.">
+  <title>CMR Ping Booster · Gaming Network Stability Suite (Android &amp; PC)</title>
+
+  <meta name="description" content="Official CMR Ping Booster website for Android and Windows: network measurements, configurable DNS, documentation, and privacy.">
   <meta name="author" content="Jonathan Gabriel Nieto / CMR — Creative Maximum Reasoning">
   <meta name="creator" content="Jonathan Gabriel Nieto">
   <meta name="publisher" content="Creative Maximum Reasoning (CMR)">
   <meta name="copyright" content="Copyright © 2026 Jonathan Gabriel Nieto / CMR — Creative Maximum Reasoning. All rights reserved.">
   <meta name="application-name" content="CMR Ping Booster">
   <meta name="theme-color" content="#090a0d">
-  
+
   <meta property="og:title" content="CMR Ping Booster · Official Gaming Network Suite">
-  <meta property="og:description" content="Network and system stability optimization for Android and Windows. Matte technical interface, LATAM Anycast routing, and zero anti-cheat risk.">
+  <meta property="og:description" content="Local network measurement and configuration tools for Android and Windows, without guaranteed performance claims.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Creative Maximum Reasoning (CMR)">
   <meta property="og:image" content="../assets/cmr_brand.png">
   <meta property="article:author" content="Jonathan Gabriel Nieto">
-  
+
   <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
   <link rel="apple-touch-icon" href="../assets/logo.png">
-  
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
+
   <link rel="stylesheet" href="../styles.css">
 
   <script type="application/ld+json">
@@ -55,7 +55,7 @@
       "name": "Jonathan Gabriel Nieto"
     },
     "copyrightYear": 2026,
-    "description": "Cross-platform network optimization, jitter mitigation, and Anycast DNS routing suite for Android and PC developed by Creative Maximum Reasoning."
+    "description": "Local network measurement and DNS configuration tools for Android and Windows developed by Creative Maximum Reasoning."
   }
   </script>
 </head>
@@ -76,10 +76,10 @@
           <a href="#architecture" class="nav-link">Specification</a>
           <a href="#pc-suite" class="nav-link">PC Suite</a>
           <a href="#pc-updater" class="nav-link">PC Updater</a>
-          <a href="#compliance" class="nav-link">Compliance & Policies</a>
+          <a href="#compliance" class="nav-link">Compliance &amp; Policies</a>
         </nav>
         <div class="nav-actions">
-          <div class="lang-switch" aria-label="Language selector">
+          <div class="lang-switch" role="group" aria-label="Language selector">
             <a href="../index.html" class="lang-option">ES</a>
             <a href="./index.html" class="lang-option active">EN</a>
           </div>
@@ -93,20 +93,20 @@
     <section class="hero" id="app-android">
       <div class="container">
         <div class="hero-editorial">
-          
+
           <div class="hero-main-column">
             <div class="badge-live">
               <span class="status-indicator"></span>
-              <span>Android Closed Testing · Google Play Console</span>
+              <span>ANDROID APP · VERSION 1.0.0 (1)</span>
             </div>
-            
+
             <h2 class="hero-title">
-              Mobile Network Stability.<br>
-              <span class="hero-title-sub">Anycast Routing Engineering.</span>
+              Local DNS control.<br>
+              <span class="hero-title-sub">Real measurements on your device.</span>
             </h2>
-            
+
             <p class="hero-subtitle">
-              Packet jitter mitigation on Wi-Fi and cellular connections via local loopback DNS interface and background scan suspension. Zero memory injection and full compliance with Google Play Store developer policies.
+              CMR Ping Booster creates a local VPN interface to apply the selected DNS resolver and MTU. It measures your network at the time of use, does not modify games, and cannot guarantee lower ping.
             </p>
 
             <div class="cta-group" id="downloads-android">
@@ -117,7 +117,7 @@
                   </svg>
                 </div>
                 <div class="btn-content">
-                  <span class="btn-title">Google Play · Closed Testing</span>
+                  <span class="btn-title">Android details and privacy</span>
                   <span class="btn-sub" id="android-version-badge">v1.0.0 · Android 7.0 or higher</span>
                 </div>
               </a>
@@ -131,35 +131,6 @@
             </div>
           </div>
 
-          <!-- TELEMETRY RACK HUD -->
-          <div class="telemetry-rack">
-            <div class="rack-header">
-              <span class="rack-header-label">Backbone Link Telemetry (Idle)</span>
-              <span class="rack-state-pill">ACTIVE · LOCAL</span>
-            </div>
-
-            <div class="rack-metrics-grid">
-              <div class="rack-metric-cell">
-                <div class="rack-metric-value">
-                  <span id="live-ping-val">21</span><span class="rack-metric-unit">ms</span>
-                </div>
-                <div class="rack-metric-caption">Real Backbone Latency</div>
-              </div>
-              
-              <div class="rack-metric-cell">
-                <div class="rack-metric-value">
-                  <span id="live-jitter-val">1.2</span><span class="rack-metric-unit">ms</span>
-                </div>
-                <div class="rack-metric-caption">Jitter / Variance</div>
-              </div>
-            </div>
-
-            <div class="rack-terminal">
-              <span class="terminal-prompt">$</span>
-              <span class="terminal-stream" id="radar-live-text">CS2 Relay AR: 18ms   •   Valorant LAS: 22ms   •   LoL Cono Sur: 19ms   •   Fortnite BR: 28ms</span>
-            </div>
-          </div>
-
         </div>
       </div>
     </section>
@@ -167,42 +138,42 @@
     <!-- TECHNICAL SPECIFICATION -->
     <section class="spec-section" id="architecture">
       <div class="container">
-        
+
         <div class="section-editorial-head">
           <div class="head-title-wrap">
-            <h2>Network Modules & System Architecture</h2>
-            <p>Standardized technical implementation based on RFC guidelines and official Android & Windows APIs.</p>
+            <h2>Network Modules &amp; System Architecture</h2>
+            <p>Standardized technical implementation based on RFC guidelines and official Android &amp; Windows APIs.</p>
           </div>
           <span class="head-meta-code">SPEC DOC · REV 2026</span>
         </div>
 
         <div class="spec-rows-list">
-          
+
           <div class="spec-row">
             <span class="spec-code">MOD-01</span>
-            <div class="spec-name">Zero Anti-Cheat Intrusion</div>
+            <div class="spec-name">No game modification</div>
             <div class="spec-desc">
               Does not request process read/write handles (<code>PROCESS_VM_READ</code>), injects no dynamic libraries, and analyzes no game memory spaces. Functions strictly on OS network abstraction layers.
             </div>
-            <div class="spec-status">Compliance 100%</div>
+            <div class="spec-status">No injection</div>
           </div>
 
           <div class="spec-row">
             <span class="spec-code">MOD-02</span>
-            <div class="spec-name">Anycast DNS Routing</div>
+            <div class="spec-name">Encrypted public DNS</div>
             <div class="spec-desc">
-              Direct local query forwarding to geographically proximate Edge BGP nodes (Cloudflare Gaming, NextDNS, Quad9, Google) to minimize matchmaking lookup latency.
+              Compares five public resolvers and forwards queries to the selected provider using DNS over TLS. Results depend on the network and location.
             </div>
-            <div class="spec-status">Edge BGP Routing</div>
+            <div class="spec-status">Configurable DNS</div>
           </div>
 
           <div class="spec-row">
             <span class="spec-code">MOD-03</span>
-            <div class="spec-name">Wi-Fi Spike Suppression</div>
+            <div class="spec-name">Low-latency Wi-Fi request</div>
             <div class="spec-desc">
-              Dynamic hardware Wi-Fi lock enforcement (<code>WIFI_MODE_FULL_LOW_LATENCY</code>) to prevent operating system background scans from introducing jitter spikes.
+              Requests Android's low-latency Wi-Fi mode while the session is active. Android and the device maker determine its actual effect.
             </div>
-            <div class="spec-status">Kernel Lock API</div>
+            <div class="spec-status">Android API</div>
           </div>
 
           <div class="spec-row">
@@ -218,18 +189,18 @@
             <span class="spec-code">MOD-05</span>
             <div class="spec-name">Immediate Reversibility</div>
             <div class="spec-desc">
-              Disengaging the booster automatically unbinds virtual interfaces and cleanly restores native system network routing in an atomic transaction.
+              Stopping the session closes the local VPN interface and releases the Wi-Fi locks acquired by the app.
             </div>
-            <div class="spec-status">Atomic Clean</div>
+            <div class="spec-status">Verifiable stop</div>
           </div>
 
           <div class="spec-row">
             <span class="spec-code">MOD-06</span>
-            <div class="spec-name">100% Local On-Device Processing</div>
+            <div class="spec-name">No CMR servers</div>
             <div class="spec-desc">
-              All computation executes locally on the user terminal. Requires no account creation, emits zero telemetry logs, and stores no connection histories.
+              No account or advertising analytics are required. DNS queries go directly to the selected public resolver and are not received by CMR.
             </div>
-            <div class="spec-status">Zero Data Policy</div>
+            <div class="spec-status">No account</div>
           </div>
 
         </div>
@@ -240,7 +211,7 @@
     <!-- DEDICATED PC SUITE (WINDOWS) -->
     <section class="desktop-suite-section" id="pc-suite">
       <div class="container">
-        
+
         <div class="desktop-console-layout">
           <div class="desktop-info-col">
             <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
@@ -249,14 +220,14 @@
             </div>
             <h3>CMR Ping Booster for PC</h3>
             <p>
-              Engineered specifically for competitive desktop gamers. A lightweight, standalone 64-bit portable application for Windows 10 and 11 that tunes scheduler precision and Winsock latency without invasive kernel drivers.
+              A lightweight, portable 64-bit utility for Windows 10 and 11. It requests documented timer and socket settings while open, without installing kernel drivers.
             </p>
-            
+
             <ul class="desktop-features-check">
-              <li><strong>1.0 ms Exact Multimedia Timer:</strong> Locks scheduler resolution via <code>timeBeginPeriod</code> to stabilize frame pacing and reduce input latency in tactical FPS and MOBAs.</li>
+              <li><strong>Multimedia timer:</strong> Requests 1 ms resolution while the program is active; Windows and the hardware determine the actual effect.</li>
               <li><strong>Selective RAM Working Set Compaction:</strong> Clears unreferenced memory pages without freezing or interrupting active game threads.</li>
               <li><strong>Completely Decoupled from Android:</strong> Independent native binary (.exe) with zero cross-platform runtime baggage.</li>
-              <li><strong>Zero Anti-Cheat Risk:</strong> 100% compliant with Riot Vanguard, Easy Anti-Cheat, BattlEye, VAC, and Ricochet.</li>
+              <li><strong>No injection:</strong> Does not modify game memory or binaries. Each game retains its own compatibility rules.</li>
             </ul>
 
             <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px;">
@@ -273,7 +244,7 @@
               </a>
 
               <a href="./pc-privacy.html" class="btn-secondary-action">
-                <span>View PC Terms & Specification</span>
+                <span>View PC Terms &amp; Specification</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <line x1="5" y1="12" x2="19" y2="12"></line>
                   <polyline points="12 5 19 12 12 19"></polyline>
@@ -309,9 +280,9 @@
                   <td>Direct In-App Auto-Updater</td>
                 </tr>
                 <tr>
-                  <td>Privacy & Telemetry</td>
-                  <td>0 Logs / 100% Local</td>
-                  <td>0 Logs / 100% Local</td>
+                  <td>Data and privacy</td>
+                  <td>No account or analytics</td>
+                  <td>No account or analytics</td>
                 </tr>
                 <tr>
                   <td>System Requirements</td>
@@ -320,8 +291,8 @@
                 </tr>
                 <tr>
                   <td>Anti-Cheat Safety</td>
-                  <td>Zero Risk</td>
-                  <td>Zero Risk (No Memory Injection)</td>
+                  <td>Does not modify games</td>
+                  <td>No memory injection</td>
                 </tr>
               </tbody>
             </table>
@@ -335,7 +306,7 @@
     <section class="updater-section" id="pc-updater">
       <div class="container">
         <div class="updater-layout">
-          
+
           <div class="updater-details">
             <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
               <span class="badge-pill-status pc">IN-APP UPDATER</span>
@@ -385,23 +356,23 @@
     <!-- COMPLIANCE & LEGAL AUDIT -->
     <section class="legal-audit-section" id="compliance">
       <div class="container">
-        
+
         <div class="section-editorial-head">
           <div class="head-title-wrap">
-            <h2>Policy Compliance & Legal Specifications</h2>
+            <h2>Policy Compliance &amp; Legal Specifications</h2>
             <p>Rigorous transparency aligned with Google Play Console requirements and PC software integrity standards.</p>
           </div>
-          <span class="head-meta-code">DATA SAFETY & COMPLIANCE</span>
+          <span class="head-meta-code">DATA SAFETY &amp; COMPLIANCE</span>
         </div>
 
         <div class="audit-grid">
-          
+
           <div class="audit-cell">
             <div>
               <span class="audit-cell-tag">ANDROID GOOGLE PLAY</span>
               <h3>Official Privacy Policy</h3>
               <p>
-                Explicit technical declaration covering zero telemetry collection, 100% on-device processing, and strict lack of user monitoring.
+                Explains what the local VPN interface processes, what CMR does not receive, and which external resolvers may be involved.
               </p>
             </div>
             <a href="./privacy.html" class="audit-cell-link">
@@ -427,9 +398,9 @@
           <div class="audit-cell">
             <div>
               <span class="audit-cell-tag">WINDOWS DESKTOP</span>
-              <h3>PC Security Terms & Architecture</h3>
+              <h3>PC Security Terms &amp; Architecture</h3>
               <p>
-                Complete technical documentation for the Windows client: 1.0 ms multimedia timer architecture, anti-cheat safety, and in-app updater behavior.
+                Technical documentation for the Windows client: multimedia timer use, no memory injection, and updater behavior.
               </p>
             </div>
             <a href="./pc-privacy.html" class="audit-cell-link">
@@ -451,7 +422,7 @@
           <img src="../assets/cmr_brand.png?v=2026" alt="Official CMR Logo" class="footer-logo-img">
           <span class="footer-brand-name">Creative Maximum Reasoning</span>
         </div>
-        
+
         <div class="footer-links-row">
           <a href="./index.html#app-android" class="footer-link">Android App</a>
           <a href="./index.html#pc-suite" class="footer-link">PC Suite</a>
@@ -464,7 +435,7 @@
 
       <div class="footer-bottom-row">
         <span>Copyright © 2026 Jonathan Gabriel Nieto / CMR. All rights reserved.</span>
-        <span>Official Cross-Platform Suite · Android & Windows PC</span>
+        <span>Official Cross-Platform Suite · Android &amp; Windows PC</span>
       </div>
     </div>
   </footer>
