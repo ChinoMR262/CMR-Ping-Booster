@@ -105,6 +105,9 @@
               <li><strong>Browsing Data:</strong> CMR does not receive or store DNS queries, visited domains, network packets, or web sessions. Required queries are sent directly to the selected resolver.</li>
               <li><strong>Infrastructure:</strong> The application does not operate commercial proxy nodes, external routing gateways, or analytical tracking servers.</li>
             </ul>
+            <p>
+              For Google Play taxonomy purposes, this ephemeral transfer is conservatively declared as <strong>Web browsing → Web browsing history</strong>. This does not mean that CMR creates or retains a history: CMR does not receive this data, and the query is sent to the selected public DNS provider to return the requested resolution.
+            </p>
           </section>
 
           <section class="legal-section" id="vpnservice">
@@ -185,6 +188,11 @@
                   <td><code>KILL_BACKGROUND_PROCESSES</code></td>
                   <td>Ask Android to perform limited background process closure for selected apps.</td>
                   <td>Local management</td>
+                </tr>
+                <tr>
+                  <td><code>moe.shizuku.manager.permission.API_V23</code></td>
+                  <td>Request optional advanced access only through Shizuku.</td>
+                  <td>Optional</td>
                 </tr>
               </tbody>
             </table>
