@@ -1,21 +1,14 @@
 {
   "android": {
-    "versionCode": 1,
+    "versionCode": 3,
     "versionName": "1.0.0",
     "packageId": "com.cmr.pingbooster",
     "distribution": "Google Play",
-    "apkName": "CMR_Ping_Booster_v1.0.0_Release.apk",
-    "apkSha256": "7AD37DBAE65ED40395F66600A3E3109D30CDA9E52D4BFB942F76FF6904627EAA",
+    "aabName": "CMR_Ping_Booster_v1.0.0(3)_Release.aab",
+    "aabSha256": "F0577C8EA723EF249E5991E99DB30AFDC8A15F051B9280271F27679E63668D38",
     "minAndroidVersion": "Android 7.0 (API 24)",
     "targetAndroidVersion": "Android 16 (API 36)",
-    "releaseDate": "2026-09-14",
-    "features": [
-      "Interfaz VPN local limitada a consultas DNS",
-      "Medición comparativa de resolvers y nodos regionales",
-      "CMR no almacena consultas; el DNS se resuelve con el proveedor elegido",
-      "Cierre de la interfaz VPN y liberación de bloqueos Wi-Fi al detener la sesión",
-      "Consentimiento explícito antes de solicitar el permiso VpnService"
-    ]
+    "releaseDate": "2026-09-14"
   },
   "pc": {
     "version": "1.0.0",

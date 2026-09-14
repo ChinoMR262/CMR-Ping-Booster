@@ -5,28 +5,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function loadRemoteVersion() {
   const isEnglish = window.location.pathname.includes('/en/');
+  const androidReleasePath = isEnglish ? '../android-release.json' : './android-release.json';
   const versionManifestPath = isEnglish ? '../version.json' : './version.json';
 
   try {
-    const res = await fetch(versionManifestPath);
-    if (!res.ok) return;
-    const data = await res.json();
+    const [androidResponse, versionResponse] = await Promise.all([
+      fetch(androidReleasePath, { cache: 'no-store' }),
+      fetch(versionManifestPath, { cache: 'no-store' })
+    ]);
+    if (!androidResponse.ok || !versionResponse.ok) return;
+    const data = await androidResponse.json();
+    const versionManifest = await versionResponse.json();
 
-    if (data.android) {
+    if (data.versionName && data.versionCode) {
       const androidBadge = document.getElementById('android-version-badge');
       if (androidBadge) {
         androidBadge.textContent = isEnglish
-          ? `v${data.android.versionName} · Android 7.0 or higher`
-          : `v${data.android.versionName} · Android 7.0 o superior`;
+          ? `v${data.versionName} (${data.versionCode}) · Android 7.0 or higher`
+          : `v${data.versionName} (${data.versionCode}) · Android 7.0 o superior`;
       }
     }
 
-    if (data.pc) {
+    if (versionManifest.pc) {
       const pcBadge = document.getElementById('pc-version-badge');
       if (pcBadge) {
         pcBadge.textContent = isEnglish
-          ? `v${data.pc.version} EXE · Standalone Portable Binary`
-          : `v${data.pc.version} EXE · Binario Autónomo Portable`;
+          ? `v${versionManifest.pc.version} EXE · Standalone Portable Binary`
+          : `v${versionManifest.pc.version} EXE · Binario Autónomo Portable`;
       }
     }
   } catch (err) {
