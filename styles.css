@@ -68,9 +68,7 @@ body {
   min-height: 100vh;
 }
 
-/* ================= ATMÓSFERA DE FONDO DE INSTRUMENTACIÓN & RADAR =================
-   Fondo ambiental oficial derivado del emblema de radar y telemetría de CMR Ping Booster.
-   Refleja la identidad visual de la aplicación con degradé cenital carbón-acero y presencia de señal. */
+/* Fondo CMR derivado del emblema de radar, sin desenfoque. */
 body::before {
   content: "";
   position: fixed;
@@ -1564,15 +1562,53 @@ body::before {
   .legal-table {
     display: block;
     width: 100%;
-    overflow-x: auto;
-    overscroll-behavior-inline: contain;
-    -webkit-overflow-scrolling: touch;
+    font-size: 0.94rem;
   }
 
-  .legal-table th,
+  .legal-table thead {
+    display: none;
+  }
+
+  .legal-table tbody,
+  .legal-table tr,
   .legal-table td {
-    min-width: 150px;
-    padding: 11px 12px;
+    display: block;
+    width: 100%;
+  }
+
+  .legal-table tr {
+    margin-bottom: 12px;
+    padding: 12px 14px;
+    border: 1px solid var(--border-dim);
+    background: rgba(18, 24, 33, 0.72);
+  }
+
+  .legal-table td {
+    min-width: 0;
+    padding: 5px 0;
+    border: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .legal-table td::before {
+    display: block;
+    margin-bottom: 3px;
+    color: var(--text-muted);
+    font: 700 0.68rem/1.3 var(--font-mono);
+    letter-spacing: 0.06em;
+  }
+
+  html[lang="es"] .legal-table td:nth-child(1)::before { content: "PERMISO"; }
+  html[lang="es"] .legal-table td:nth-child(2)::before { content: "PROPÓSITO"; }
+  html[lang="es"] .legal-table td:nth-child(3)::before { content: "ALCANCE"; }
+  html[lang="en"] .legal-table td:nth-child(1)::before { content: "PERMISSION"; }
+  html[lang="en"] .legal-table td:nth-child(2)::before { content: "PURPOSE"; }
+  html[lang="en"] .legal-table td:nth-child(3)::before { content: "SCOPE"; }
+
+  .legal-table td code {
+    display: inline-block;
+    max-width: 100%;
+    white-space: normal;
   }
 
   .contact-channels {

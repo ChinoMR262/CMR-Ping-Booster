@@ -105,6 +105,9 @@
               <li><strong>Historial de Navegación:</strong> CMR no recibe ni almacena consultas DNS, dominios visitados, paquetes de red ni sesiones web. Las consultas necesarias se envían directamente al resolver seleccionado.</li>
               <li><strong>Infraestructura:</strong> La aplicación no opera servidores proxy comerciales ni almacena registros (logs) de conexiones en la nube.</li>
             </ul>
+            <p>
+              A efectos de la taxonomía de Google Play, esta transferencia efímera se declara de forma conservadora como <strong>Navegación web → Historial de navegación web</strong>. Esto no implica que CMR cree o conserve un historial: CMR no recibe esos datos y la consulta se transmite al proveedor DNS público elegido para devolver la resolución solicitada.
+            </p>
           </section>
 
           <section class="legal-section" id="vpnservice">
@@ -185,6 +188,11 @@
                   <td><code>KILL_BACKGROUND_PROCESSES</code></td>
                   <td>Solicitar a Android el cierre limitado de procesos de terceros seleccionados.</td>
                   <td>Gestión local</td>
+                </tr>
+                <tr>
+                  <td><code>moe.shizuku.manager.permission.API_V23</code></td>
+                  <td>Solicitar acceso avanzado opcional únicamente a través de Shizuku.</td>
+                  <td>Opcional</td>
                 </tr>
               </tbody>
             </table>

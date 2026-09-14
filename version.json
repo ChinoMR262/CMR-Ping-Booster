@@ -4,9 +4,11 @@
     "versionName": "1.0.0",
     "packageId": "com.cmr.pingbooster",
     "distribution": "Google Play",
+    "apkName": "CMR_Ping_Booster_v1.0.0_Release.apk",
+    "apkSha256": "7AD37DBAE65ED40395F66600A3E3109D30CDA9E52D4BFB942F76FF6904627EAA",
     "minAndroidVersion": "Android 7.0 (API 24)",
     "targetAndroidVersion": "Android 16 (API 36)",
-    "releaseDate": "2026-09-13",
+    "releaseDate": "2026-09-14",
     "features": [
       "Interfaz VPN local limitada a consultas DNS",
       "Medición comparativa de resolvers y nodos regionales",
